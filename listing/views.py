@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic
+from django.views.generic import TemplateView
+# from .forms import CommentForm
+from django.utils import timezone
 
-# Create your views here.
+def details(request):
+    return render(request,'listing/details.html',{'a':'b'})
