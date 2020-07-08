@@ -5,4 +5,5 @@ from django.views.generic import TemplateView
 from django.utils import timezone
 
 def details(request):
-    return render(request,'listing/details.html',{'a':'b'})
+    heejae = 'Matilda'
+    return render(request,'listing/details.html',{'a':heejae})
