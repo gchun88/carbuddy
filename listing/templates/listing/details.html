@@ -2,140 +2,230 @@
 <html lang="en">
 
 
-
-
 <head>
     <meta charset="UTF-8">
 
     <title>aa</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
     <style>
+
         .heejaetable {
-            color: #008000;
+            color:green;
         }
+        body {
+            background: #F8F7F7;
+}
 
     </style>
 
 </head>
 
-<body>
-<h1>
-    3 ways to embed css.<br>
-    1. Inline : style attribute<br>
-    2. Internal : style element in in head<br>
-    3. External : external css file
+
+
+{{ a }}
+
+<h1 style="position: absolute;
+width: 126px;
+height: 72px;
+left: 969px;
+top: 52px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 72px;
+/* identical to box height, or 240% */
+letter-spacing: -0.015em;
+
+color: #000000;">
+
+    SEARCH<br>
 
 </h1>
 
-<h2>Table 1</h2>
-<table style ="color:#1c6f93">
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
-    </tr>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-    </tr>
-  </table>
-</div>
+{% comment %}Search underbar{% endcomment %}
+<h2 style="position: absolute;
+width: 200px;
+height: 0px;
+left: 1100px;
+top: 99px;
 
-<h2>Table 2</h2>
-<table class = 'heejaetable' >
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
-    </tr>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-    </tr>
-  </table>
-</div>
+border: 2px solid #000000;">
 
-<h2>Table 3</h2>
-<table>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
-    </tr>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-    </tr>
-  </table>
-</div>
+</h2>
 
-{{ a }}
-{{ a }}
-<p>Search</p>
+{% comment %}search icon{% endcomment %}
+<h3 style ="position: absolute;
+width: 16px;
+height: 16px;
+left: 1278px;
+top: 77px;
+
+border: 2px solid #000000;
+box-sizing: border-box;">
+
+</h3>
 
 
+<h4 style = " position: absolute;
+width: 7.81px;
+height: 0px;
+left: 1290px;
+top: 90px;
+
+border: 3px solid #000000;
+transform: rotate(39.81deg);"></h4>
+
+
+<h5 style = "position: absolute;
+width: 169px;
+height: 72px;
+left: 877px;
+top: 258px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 72px;
+">
+    Mercedes-Benz<br>
+</h5>
+
+<h6 style = "
+  position: absolute;
+width: 299px;
+height: 58px;
+left: 877px;
+top: 230px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 70px;
+/* or 146% */
+letter-spacing: -0.015em;
+">
+    GLA250 SUV<br>
+</h6>
+
+<p1 style ="position: absolute;
+width: 167px;
+height: 140px;
+left: 877px;
+top: 450px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;">
+      <br>Launch Year</br>
+      <br>Engine</br>
+      <br>Starting MSRP</br>
+</p1>
+
+<p2 style = "position: absolute;
+width: 192px;
+height: 190px;
+left: 1147px;
+top: 450px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;">
+      <br>2021</br>
+      <br>2.0L inline-4 turbo</br>
+      <br>$36,32</br>
+    </p2>
+
+<div style = "position: absolute;
+width: 700px;
+height: 850px;
+left: 76px;
+top: 250px;
+
+background: #FFFFFF;"></div>
 
 <div>
-    <div>
-    <img src='#' alt="" style="width:300px;">
-        </div>
-    <div>
+    <img src='image 1.png' alt="GLA250 SUV" style="
+    position: absolute;
+width: 688px;
+height: 602px;
+left: 71px;
+top: 374px;
+">
+</div>
 
-        <p>Mercedes-Benz</p>
-        <p>GLA 250 SUV</p>
-    </div>
-    <div>
-        <p>Launch Year 2021</p>
-        <p>Engine 2.0L inline-4 turbo</p>
-        <p>Starting MSRP $36,230</p>
-    </div>
-    <div>
+
+<div style = "
+ position: absolute;
+width: 432px;
+height: 213px;
+left: 877px;
+top: 700px;
+padding-left: 30px;
+padding-top: 20px;
+background: #DFDFDF;
+
+font-family: Arial;
+font-style: italic;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: first;
+text-align: left;
+letter-spacing: -0.015em;
+">
         <p>Lowest Price</p>
-        <p>Lease</p>
-        <p>New</p>
-        <p>Pre-Owned</p>
-    </div>
-
-
-    </div>
 </div>
 
-<div>
+<p3 style ="position: absolute;
+width: 104px;
+height: 102px;
+left: 936px;
+top: 790px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+line-height: 20px;
+/* or 143% */
+display: flex;
+align-items: center;
+letter-spacing: -0.015em;"
+        <br>Lease</br>
+        <br>New</br>
+        <br>Pre-Owned</br>
+    </p3>
+
+
+
+<div style ="position: absolute;
+width: 160px;
+height: 40px;
+left: 280px;
+top: 1208px;" >
      <ul>
         <li>
-            <input type="radio" name="radio" value="value1" checked>Lease Offer
+            <input type="radio" name="radio" value="value1" checked>
+            <p style = "
+font-family: Al Nile;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height, or 133% */
+letter-spacing: -0.04em;
+color: #4B4907;">Lease Offer</p>
             <input type="radio" name="radio" value="value1">New Offer
             <input type="radio" name="radio" value="value1">Pre-Owned Offer
             <input type="radio" name="radio" value="value1">Details
@@ -160,13 +250,134 @@ Remember to set the width: -->
 </div>
 
 <!-- This will be replaced after data modeling -->
-<h1>Closest Top 10 Cities Near You (Within 50 miles) </h1>
-<h2>[City Name1]Los Angeles, CA</h2>
-<h4>[Price Range for the First City]$349.50 ~ $400.00</h4>
-<h2>Irvine, CA</h2>
-<h4>$366.20 ~ $580.00</h4>
-<h2>Santa Barbara, CA</h2>
-<h4>$349.50 ~ $400.00</h4>
+
+
+
+<div style = "position: absolute;
+width: 959px;
+height: 183px;
+left: 238px;
+top: 1571px;
+
+background: #FFFFFF;"></div>
+
+<h1 style="position: absolute;
+width: 180px;
+height: 70px;
+left: 291px;
+top: 1625px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 70px;
+/* identical to box height, or 175% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">$349.50 ~</h1>
+
+<h2 style = "position: absolute;
+width: 200px;
+height: 70px;
+left: 498px;
+top: 1582px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 70px;
+/* identical to box height, or 292% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">Los Angeles, CA</h2>
+
+<div style = "position: absolute;
+width: 959px;
+height: 183px;
+left: 238px;
+top: 1768px;
+
+background: #FFFFFF;"></div>
+
+<h3 style="position: absolute;
+width: 180px;
+height: 70px;
+left: 291px;
+top: 1822px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 70px;
+/* identical to box height, or 175% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">$360.00 ~</h3>
+
+<h4 style = "position: absolute;
+width: 200px;
+height: 70px;
+left: 498px;
+top: 1779px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 70px;
+/* identical to box height, or 292% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">Los Angeles, CA</h4>
+
+<div style = "position: absolute;
+width: 959px;
+height: 183px;
+left: 238px;
+top: 1961px;
+
+background: #FFFFFF;"></div>
+
+<h5 style="position: absolute;
+width: 180px;
+height: 70px;
+left: 291px;
+top: 2000px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 70px;
+/* identical to box height, or 175% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">$410.00 ~</h5>
+
+<h6 style = "position: absolute;
+width: 200px;
+height: 70px;
+left: 498px;
+top: 1960px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 70px;
+/* identical to box height, or 292% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;">Los Angeles, CA</h6>
 
 
 </body>
