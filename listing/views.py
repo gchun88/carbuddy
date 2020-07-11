@@ -4,6 +4,11 @@ from django.views.generic import TemplateView
 # from .forms import CommentForm
 from django.utils import timezone
 
+
+
 def details(request):
     heejae = 'Matilda'
     return render(request,'listing/details.html',{'a':heejae})
+
+
+
