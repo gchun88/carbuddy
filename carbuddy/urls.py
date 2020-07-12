@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path,include
 from . import views
 from listing import views as views_listing
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('',views.testlink1),
@@ -25,3 +28,5 @@ urlpatterns = [
     path('carmodels/details/',views_listing.details),
     #path('carmodels/',include('listing.urls')),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

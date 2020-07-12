@@ -6,109 +6,56 @@
     <meta charset="UTF-8">
 
     <title>aa</title>
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
-    <style>
-
-        .heejaetable {
-            color:green;
-        }
-        body {
-            background: #F8F7F7;
-}
-
-    </style>
+<style>
+    h1.search-text
+    {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 1278px;
+        top: 77px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+    }
+    h2.search-underbar
+    {
+        position: absolute;
+        width: 200px;
+        height: 0px;
+        left: 1100px;
+        top: 99px;
+        border: 2px solid #000000;
+    }
+</style>
 
 </head>
 
 
 
 {{ a }}
+<!-- this is creating search icon -->
 
-<h1 style="position: absolute;
-width: 126px;
-height: 72px;
-left: 969px;
-top: 52px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 72px;
-/* identical to box height, or 240% */
-letter-spacing: -0.015em;
-
-color: #000000;">
-
-    SEARCH<br>
-
-</h1>
-
+<h1 class="search-text">SEARCH</h1>
 {% comment %}Search underbar{% endcomment %}
-<h2 style="position: absolute;
-width: 200px;
-height: 0px;
-left: 1100px;
-top: 99px;
-
-border: 2px solid #000000;">
-
-</h2>
-
+<h2 class = "search-underbar"></h2>
 {% comment %}search icon{% endcomment %}
-<h3 style ="position: absolute;
-width: 16px;
-height: 16px;
-left: 1278px;
-top: 77px;
-
-border: 2px solid #000000;
-box-sizing: border-box;">
-
-</h3>
+<h3 class="search-icon"></h3>
 
 
-<h4 style = " position: absolute;
-width: 7.81px;
-height: 0px;
-left: 1290px;
-top: 90px;
-
-border: 3px solid #000000;
-transform: rotate(39.81deg);"></h4>
+<h4></h4>
 
 
-<h5 style = "position: absolute;
-width: 169px;
-height: 72px;
-left: 877px;
-top: 258px;
-
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 72px;
-">
+<h5>
     Mercedes-Benz<br>
 </h5>
 
-<h6 style = "
-  position: absolute;
-width: 299px;
-height: 58px;
-left: 877px;
-top: 230px;
-
-font-family: Arial;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 70px;
-/* or 146% */
-letter-spacing: -0.015em;
-">
+<h6>
     GLA250 SUV<br>
 </h6>
 
@@ -153,8 +100,7 @@ top: 250px;
 background: #FFFFFF;"></div>
 
 <div>
-    <img src='image 1.png' alt="GLA250 SUV" style="
-    position: absolute;
+    <img src="{% static 'testimage.png' %}" alt="GLA250 SUV" style="position: absolute;
 width: 688px;
 height: 602px;
 left: 71px;
