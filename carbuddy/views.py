@@ -12,7 +12,7 @@ def index(request):
 
 class CarListView(generic.ListView):
 	model = Car
-	paginate_by = 10
+	# paginate_by = 10
 
 # def testlink1(request):
 #     html = '<html><body><a href="carmodels/">carmodel List</a></body></html>'

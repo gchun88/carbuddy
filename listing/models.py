@@ -9,6 +9,9 @@ class Car(models.Model):
 	brand=models.ForeignKey('Brand', on_delete=models.SET_NULL, null=True)
 	launch_year=models.CharField(max_length=4)
 
+	class Meta:
+		ordering=['-launch_year']
+
 	def __str__(self):
 		return self.model_name
 
