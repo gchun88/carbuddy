@@ -7,6 +7,10 @@ def index(request):
 	#View function for home page of site
 	return render(request, 'index.html') 
 
+def list(request):
+	#update html return 
+	return render(request, 'index.html')
+
 
 # def testlink1(request):
 #     html = '<html><body><a href="carmodels/">carmodel List</a></body></html>'
