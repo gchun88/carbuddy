@@ -5,7 +5,23 @@
   <div class="search_filter">
   	<p>SEARCH FUNCTION AREA
   	<form method="GET" action=".">
-  		
+  	  <!-- <label for="location">Location</label>
+  	  <input type="text" placeholder="State">
+  	  <input type="text" placeholder="City"> -->
+  	  <div class="tester">
+  	  <label for="brand">Brand</label>
+  	  <input type="text" class="brand_filter" placeholder="Brand">
+  	  {%if car_list %}
+  	    <div class="brand_options">
+  	    {% for car in car_list %}
+  	      <p value="brands">{{ car.brand }}</p>
+  	    {% endfor %}
+  	    </div>
+  	  {% endif %}
+  	</div>
+  	  <label for ="year">Year</label>
+  	  <input type="text" placeholder="Year">
+
   	</form>
   </div>
 
