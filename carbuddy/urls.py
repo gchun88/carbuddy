@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('carmodels/',views.testlink2,),
     path('carmodels/details/',views_listing.details, name='car_details'),
+    path('carmodels/details2/',views_listing.details2, name='car_details2'),
     #path('carmodels/',include('listing.urls')),
     path('list/', views.CarListView.as_view(), name='car_list'),
     

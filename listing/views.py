@@ -12,3 +12,6 @@ def details(request):
 
 
 
+def details2(request):
+    heejae = 'Matilda'
+    return render(request,'listing/details2.html',{'a':heejae})

@@ -19,4 +19,5 @@ from . import views
 app_name = 'listing'
 urlpatterns = [
     path('details/', views.details, name = 'details'),
+    path('details2/', views.details2, name = 'details2'),
 ]
