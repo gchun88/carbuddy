@@ -10,7 +10,7 @@
   	  <input type="text" placeholder="City"> -->
   	  <div class="tester">
   	  <label for="brand">Brand</label>
-  	  <input type="text" class="brand_filter" placeholder="Brand">
+  	  <select class="brand_filter" placeholder="Brand">
   	  {%if car_list %}
   	    <div class="brand_options">
   	    {% for car in car_list %}
@@ -18,6 +18,7 @@
   	    {% endfor %}
   	    </div>
   	  {% endif %}
+      </select>
   	</div>
   	  <label for ="year">Year</label>
   	  <input type="text" placeholder="Year">
