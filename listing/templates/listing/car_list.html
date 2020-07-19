@@ -9,6 +9,28 @@
   	  <input type="text" placeholder="State">
   	  <input type="text" placeholder="City"> -->
       
+      <div class="location_filter_container">
+        <label for="brand">Location</label>
+        <select class="city_filter">
+        {%if car_list %}
+          <div class="city_options">
+          {% for car in car_list %}
+            <option value="cities">{{ car.location }}</option>
+          {% endfor %}
+          </div>
+        {% endif %}
+        </select>
+        <select class="state_filter">
+        {%if car_list %}
+          <div class="state_options">
+          {% for car in car_list %}
+            <option value="states">{{ car.location }}</option>
+          {% endfor %}
+          </div>
+        {% endif %}
+        </select>
+      </div>
+
   	  <div class="brand_filter_container">
         <label for="brand">Brand</label>
   	    <select class="brand_filter">
