@@ -3,61 +3,73 @@
 {% block content %}
 
   <div class="search_filter">
-  	<p>SEARCH FUNCTION AREA
-  	<form method="GET" action=".">
-  	  <!-- <label for="location">Location</label>
-  	  <input type="text" placeholder="State">
-  	  <input type="text" placeholder="City"> -->
-      
-      <div class="location_filter_container">
-        <label for="brand">Location</label>
-        <select class="city_filter">
-        {%if car_list %}
-          <div class="city_options">
-          {% for car in car_list %}
-            <option value="cities">{{ car.location }}</option>
-          {% endfor %}
-          </div>
-        {% endif %}
-        </select>
-        <select class="state_filter">
-        {%if car_list %}
-          <div class="state_options">
-          {% for car in car_list %}
-            <option value="states">{{ car.location }}</option>
-          {% endfor %}
-          </div>
-        {% endif %}
-        </select>
+  	<p>SEARCH FUNCTION AREA</p>
+    <div class="search-box-container">
+      <div class="search-box">
+        <form method="post" action="#">
+          <input type="text" name="search" id="textSearch" placeholder="Search">
+          <input type="submit" name="submit" id="searchButton" value="">
+        </form>
       </div>
+    </div>
 
-  	  <div class="brand_filter_container">
-        <label for="brand">Brand</label>
-  	    <select class="brand_filter">
-  	    {%if car_list %}
-  	      <div class="brand_options">
-  	      {% for car in car_list %}
-  	        <option value="brands">{{ car.brand }}</option>
-  	      {% endfor %}
-  	      </div>
-  	    {% endif %}
-        </select>
-  	  </div>
-      <div class="year_filter_container">
-  	    <label for ="year">Year</label>
-  	    <select class="year_filter">
-        {%if car_list %}
-          <div class="year_options">
-          {% for car in car_list %}
-            <option value="year">{{ car.launch_year }}</option>
-          {% endfor %}
-          </div>
-        {% endif %}
-        </select>
-      </div>
+    <div class="filter-container">
 
-  	</form>
+  	  <form method="GET" action=".">
+  	   <!-- <label for="location">Location</label>
+  	   <input type="text" placeholder="State">
+  	   <input type="text" placeholder="City"> -->
+       
+        <div class="location_filter_container">
+          <label for="brand">Location</label>
+          <select class="city_filter">
+          {%if car_list %}
+            <div class="city_options">
+              {% for car in car_list %}
+                <option value="cities">{{ car.location }}</option>
+              {% endfor %}
+            </div>
+          {% endif %}
+          </select>
+          <select class="state_filter">
+          {%if car_list %}
+            <div class="state_options">
+            {% for car in car_list %}
+              <option value="states">{{ car.location }}</option>
+            {% endfor %}
+            </div>
+          {% endif %}
+          </select>
+       </div>
+
+  	   <div class="brand_filter_container">
+          <label for="brand">Brand</label>
+  	      <select class="brand_filter">
+  	      {%if car_list %}
+  	        <div class="brand_options">
+  	        {% for car in car_list %}
+  	          <option value="brands">{{ car.brand }}</option>
+  	        {% endfor %}
+  	        </div>
+  	      {% endif %}
+          </select>
+  	   </div>
+       <div class="year_filter_container">
+  	     <label for ="year">Year</label>
+  	     <select class="year_filter">
+         {%if car_list %}
+           <div class="year_options">
+           {% for car in car_list %}
+             <option value="year">{{ car.launch_year }}</option>
+           {% endfor %}
+           </div>
+         {% endif %}
+         </select>
+       </div>
+  	  </form>
+    </div>
   </div>
+
 
   <div class="car_list_container">
     {% if car_list %}

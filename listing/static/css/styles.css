@@ -56,8 +56,8 @@
 
 .search_filter {
 	text-align: center;
-	background-color: yellow;
-}
+/*	background-color: yellow;
+*/}
 
 .car_list {
 	list-style: none;
@@ -78,11 +78,42 @@
 .brand_filter {
 	border-width: 1px;
 	border-style: solid;
-	border-crolor: rgb(118, 118, 118);
+	border-color: rgb(118, 118, 118);
 	border-image: initial;
 }
 
 .car_list_container {
 	background-color: grey;
 	border-top: 5px solid blue;
+}
+
+.search-box {
+	float: right;
+/*	border: 1px solid black;
+*/	margin-bottom: 20px;
+}
+.search-box form {
+	font-size: 0;
+}
+
+.search-box form input[type=text] {
+	padding: 6px;
+	margin-top: 18px;
+	width: 100px;
+	font-size: 20px;
+	border: none;
+}
+
+.search-box form input[type=submit] {
+	float: right;
+	background: url('/static/search.png');
+	background-repeat: no-repeat;
+	width: 54px;
+	height: 52px;
+	border: none;
+}
+
+.filter-container {
+	background-color: purple;
+	clear: both;
 }
