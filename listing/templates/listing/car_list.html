@@ -8,35 +8,47 @@
   	  <!-- <label for="location">Location</label>
   	  <input type="text" placeholder="State">
   	  <input type="text" placeholder="City"> -->
-  	  <div class="tester">
-  	  <label for="brand">Brand</label>
-  	  <select class="brand_filter" placeholder="Brand">
-  	  {%if car_list %}
-  	    <div class="brand_options">
-  	    {% for car in car_list %}
-  	      <p value="brands">{{ car.brand }}</p>
-  	    {% endfor %}
-  	    </div>
-  	  {% endif %}
-      </select>
-  	</div>
-  	  <label for ="year">Year</label>
-  	  <input type="text" placeholder="Year">
+      
+  	  <div class="brand_filter_container">
+        <label for="brand">Brand</label>
+  	    <select class="brand_filter">
+  	    {%if car_list %}
+  	      <div class="brand_options">
+  	      {% for car in car_list %}
+  	        <option value="brands">{{ car.brand }}</option>
+  	      {% endfor %}
+  	      </div>
+  	    {% endif %}
+        </select>
+  	  </div>
+      <div class="year_filter_container">
+  	    <label for ="year">Year</label>
+  	    <select class="year_filter">
+        {%if car_list %}
+          <div class="year_options">
+          {% for car in car_list %}
+            <option value="year">{{ car.launch_year }}</option>
+          {% endfor %}
+          </div>
+        {% endif %}
+        </select>
+      </div>
 
   	</form>
   </div>
 
-
-  {% if car_list %}
-  <ul class="car_list">
-    {% for car in car_list %}
-      <li>
-        <a href="{% url 'car_details' %}">{{ car }}</a> by {{ car.brand }}({{ car.launch_year }})
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no cars to be shown.</p>
-  {% endif %}       
+  <div class="car_list_container">
+    {% if car_list %}
+      <ul class="car_list">
+      {% for car in car_list %}
+        <li>
+          <a href="{% url 'car_details' %}">{{ car }}</a> by {{ car.brand }}({{ car.launch_year }})
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>There are no cars to be shown.</p>
+    {% endif %}
+  </div>       
 
 {% endblock %}
