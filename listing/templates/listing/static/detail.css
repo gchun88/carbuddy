@@ -81,3 +81,19 @@ h6 {
     /* or 146% */
     letter-spacing: -0.015em;
 }
+
+img.detail-car-image {
+    /* image 1 */
+
+position: absolute;
+width: 688px;
+height: 602px;
+left: 71px;
+top: 374px;
+
+background: url(image.png);
+
+}
+
+
+

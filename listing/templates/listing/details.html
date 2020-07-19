@@ -1,3 +1,6 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,13 +102,8 @@ top: 250px;
 
 background: #FFFFFF;"></div>
 
-<div>
-    <img src="{% static 'testimage.png' %}" alt="GLA250 SUV" style="position: absolute;
-width: 688px;
-height: 602px;
-left: 71px;
-top: 374px;
-">
+<div class="detail-car-image">
+    <img class="detail-car-image" src="{% static 'testimage.png' %}" alt="GLA250 SUV">
 </div>
 
 
@@ -133,6 +131,41 @@ letter-spacing: -0.015em;
         <p>Lowest Price</p>
 </div>
 
+
+<div style="position: absolute;
+width: 204px;
+height: 40px;
+left: 873px;
+top: 976px;
+
+background: #C4C4C4;
+border-radius: 4px;">
+    <div>    #Mercedes </div>
+</div>
+
+<div style="position: absolute;
+width: 182px;
+height: 48px;
+left: 873px;
+top: 1032px;
+
+background: #C4C4C4;
+border-radius: 4px;">
+    <div style="position:center">    #SUV </div>
+</div>
+
+<div style="position: absolute;
+width: 100px;
+height: 40px;
+left: 1102px;
+top: 976px;
+
+background: #C4C4C4;
+border-radius: 4px;">
+    <div style="position:center">    #Turbo Torque </div>
+</div>
+
+
 <p3 style ="position: absolute;
 width: 104px;
 height: 102px;
@@ -155,38 +188,16 @@ letter-spacing: -0.015em;"
 
 
 
-<div style ="position: absolute;
-width: 160px;
+<div class="custom-select" style="position: absolute;
+width: 100px;
 height: 40px;
-left: 280px;
-top: 1208px;" >
-     <ul>
-        <li>
-            <input type="radio" name="radio" value="value1" checked>
-            <p style = "
-font-family: Al Nile;
-font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 40px;
-/* identical to box height, or 133% */
-letter-spacing: -0.04em;
-color: #4B4907;">Lease Offer</p>
-            <input type="radio" name="radio" value="value1">New Offer
-            <input type="radio" name="radio" value="value1">Pre-Owned Offer
-            <input type="radio" name="radio" value="value1">Details
-        </li>
-     </ul>
-</div>
-
-<!-- Surround the select box within a "custom-select" DIV element.
-Remember to set the width: -->
-
-
-<div class="custom-select" style="width:200px;">
+left: 110px;
+top: 1110px;
+width:200px;">
   <label for="zipcode">Zipcode:</label>
     <input type="text" id="" name=""><br><br>
-  <select>
+  <select style="
+background: #EAEAEA;">
     <option value="0">Trim Level</option>
     <option value="1">Level 1</option>
     <option value="2">Level 2</option>
@@ -194,6 +205,90 @@ Remember to set the width: -->
     <option value="4">Level 4</option>
   </select>
 </div>
+        <div>
+            <div style = "position: absolute;
+width: 160px;
+height: 40px;
+left: 280px;
+top: 1208px;
+
+font-family: Al Nile;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height, or 133% */
+
+letter-spacing: -0.04em;
+
+color: #4B4907;
+">Lease Offer</div>
+            <div style ="position: absolute;
+width: 144px;
+height: 40px;
+left: 520px;
+top: 1208px;
+font-family: Al Nile;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height, or 133% */
+
+letter-spacing: -0.04em;
+
+color: #A09A9A;">New Offer</div>
+            <div style="position: absolute;
+width: 238px;
+height: 40px;
+left: 744px;
+top: 1208px;
+
+font-family: Al Nile;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height, or 133% */
+
+letter-spacing: -0.04em;
+
+color: #A09A9A;">Pre-Owned Offer</div>
+            <div style="position: absolute;
+width: 98px;
+height: 40px;
+left: 1062px;
+top: 1208px;
+
+font-family: Al Nile;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 40px;
+/* identical to box height, or 133% */
+
+letter-spacing: -0.04em;
+
+color: #A09A9A;">Details</div>
+        </div>
+
+<!-- Surround the select box within a "custom-select" DIV element.
+Remember to set the width: -->
+
+
+<h1 style="/* Line 3 */
+
+
+position: absolute;
+width: 1000px;
+height: 0px;
+left: 221px;
+top: 1265px;
+
+border: 1px solid #CECEC4;"></h1>
+
+
+
 
 <!-- This will be replaced after data modeling -->
 
@@ -327,3 +422,4 @@ letter-spacing: -0.015em;">Los Angeles, CA</h6>
 
 
 </body>
+{% endblock %}
