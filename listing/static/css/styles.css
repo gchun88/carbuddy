@@ -66,11 +66,13 @@
 	display: none;
 }
 
-.tester:hover .brand_options {
+.tester:clicked .brand_options {
 	display: block;
 }
 
-
+.brand_options p {
+	border-style: solid;
+}
 
 
 
