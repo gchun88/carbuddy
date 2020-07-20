@@ -80,7 +80,9 @@
             {% endif %}
             </div>
             <div class="car-info">
-            <a href="{% url 'car_details' %}">{{ car.car }}</a> by {{ car.car.brand }}({{ car.car.launch_year }})
+              <a href="{% url 'car_details' %}">{{ car.car }}</a> by {{ car.car.brand }}({{ car.car.launch_year }})
+              <p> Location: {{ car.avail_city}}, {{ car.avail_state }}</p>
+              <p> Price: ${{ car.price }}
             </div>
           </li>
         {% endfor %}

@@ -94,7 +94,11 @@
 	clear: both;
 }
 
-.city-filter, .state-filter, .brand-filter, .year-filter {
+.city-filter {
+	width: 150px;
+} 
+
+.state-filter, .brand-filter, .year-filter {
 	width: 100px;
 }
 
@@ -118,4 +122,5 @@
 
 .car-info {
 	margin-top: 25px;
+	text-align: left;
 }
