@@ -101,10 +101,10 @@ $36,230<br><br>
 
 <div class ="row container-fluid">
 
-    <div id="deal-options-lease" class ="col">Lease Offer</div>
-    <div id="deal-options-new" class ="col">New Offer</div>
-    <div id="deal-options-preowned" class ="col">Pre-Owned Offer</div>
-    <div id="deal-options-details" class ="col">Details</div>
+    <div  class ="col"><button id="deal-options-lease" onclick="myFunction()">Lease Offer</button></div>
+    <div class ="col"><button id="deal-options-new" onclick="myFunction()">New Offer</button></div>
+    <div class ="col"><button id="deal-options-preowned" onclick="myFunction()">Pre-Owned Offer</button></div>
+    <div class ="col"><button id="deal-options-details" onclick="myFunction()">Details</button></div>
 </div>
 <!-- Surround the select box within a "custom-select" DIV element.
 Remember to set the width: -->
@@ -114,26 +114,33 @@ Remember to set the width: -->
 border: 1px solid #CECEC4;"></h1>
 
 
-
+<p id="demo"></p>
 
 <!-- This will be replaced after data modeling -->
 
 
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
 
-
-        <div class="container">
-            <div>
-            <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-            </div>
-            <div><h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
-            <div>
-            <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-            </div>
-            <div><h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
-            <div>
-            <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-            </div>
-            <div><h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
+<div class="container">
+    <div>
+        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
+    </div>
+    <div>
+        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
+    <div>
+        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
+    </div>
+    <div>
+        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
+    <div>
+        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
+    </div>
+    <div>
+        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
 </div>
 
 
