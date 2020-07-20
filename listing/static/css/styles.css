@@ -54,35 +54,68 @@
 	text-decoration: none;
 }
 
-.search_filter {
-	text-align: center;
-	background-color: yellow;
+.search-box-container {
+	margin-top: 10px;
 }
 
-.car_list {
+.search-box {
+	float: right;
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+.search-box form {
+	font-size: 0;
+}
+
+.search-box form input[type=text] {
+	padding: 6px;
+	margin-top: 18px;
+	width: 200px;
+	font-size: 20px;
+	border: none;
+	outline: none;
+}
+
+.search-box form input[type=submit] {
+	float: right;
+	background: url('/static/search.png');
+	background-repeat: no-repeat;
+	width: 54px;
+	height: 52px;
+	border: none;
+	border-left: 1px solid black;
+}
+
+.search-filter {
+	text-align: center;
+}
+
+.filter-container {
+	clear: both;
+}
+
+.city-filter, .state-filter, .brand-filter, .year-filter {
+	width: 100px;
+}
+
+
+.car-list-container {
+	border-top: 1px solid black;
+	margin-top: 30px;
+}
+
+.car-list {
 	list-style: none;
 }
 
-.brand_options {
-	display: none;
+.car-list li {
+	display: flex;
 }
 
-.tester:clicked .brand_options {
-	display: block;
+.car-image {
+	margin-right: 20px;
 }
 
-.brand_options option {
-	border-style: solid;
-}
-
-.brand_filter {
-	border-width: 1px;
-	border-style: solid;
-	border-crolor: rgb(118, 118, 118);
-	border-image: initial;
-}
-
-.car_list_container {
-	background-color: grey;
-	border-top: 5px solid blue;
+.car-info {
+	margin-top: 25px;
 }
