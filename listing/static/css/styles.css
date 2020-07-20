@@ -74,6 +74,7 @@
 	font-size: 20px;
 	border: none;
 	outline: none;
+
 }
 
 .search-box form input[type=submit] {
@@ -94,7 +95,11 @@
 	clear: both;
 }
 
-.city-filter, .state-filter, .brand-filter, .year-filter {
+.city-filter {
+	width: 150px;
+} 
+
+.state-filter, .brand-filter, .year-filter {
 	width: 100px;
 }
 
@@ -117,5 +122,11 @@
 }
 
 .car-info {
-	margin-top: 25px;
+	margin-top: 8px;
+	text-align: left;
+}
+
+.car-info p {
+	margin: 0;
+	padding: 0;
 }
