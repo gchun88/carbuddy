@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import datetime
-from listing.models import Car
+from listing.models import CarInstance
 from django.views import generic
 
 
@@ -10,8 +10,9 @@ def index(request):
 	return render(request, 'index.html') 
 
 
-class CarListView(generic.ListView):
-	model = Car
+class CarInstanceListView(generic.ListView):
+	model = CarInstance
+	template_name = 'listing/car_list.html'
 	# paginate_by = 10
 	
 	# def get_queryset(self):

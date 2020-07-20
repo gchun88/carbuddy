@@ -28,7 +28,7 @@ urlpatterns = [
     path('carmodels/details/',views_listing.details, name='car_details'),
     path('carmodels/details2/',views_listing.details2, name='car_details2'),
     #path('carmodels/',include('listing.urls')),
-    path('list/', views.CarListView.as_view(), name='car_list'),
+    path('list/', views.CarInstanceListView.as_view(), name='car_list'),
     
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
