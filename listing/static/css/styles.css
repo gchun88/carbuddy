@@ -74,6 +74,7 @@
 	font-size: 20px;
 	border: none;
 	outline: none;
+
 }
 
 .search-box form input[type=submit] {
@@ -121,6 +122,11 @@
 }
 
 .car-info {
-	margin-top: 25px;
+	margin-top: 8px;
 	text-align: left;
+}
+
+.car-info p {
+	margin: 0;
+	padding: 0;
 }
