@@ -11,7 +11,11 @@
       <p>Your account doesn't have access to this page. To proceed,
       please login with an account that has access.</p>
     {% else %}
-      <p>Please login to see this page.</p>
+      <p>Sign in to Carbuddy</p>
+      <p>SIGN IN WITH GOOGLE</p>
+      <p>SIGN IN WITH FACEBOOK</p>
+      <p>SIGN IN WITH APPLE</p>
+      <p>-------- OR --------</p>
     {% endif %}
   {% endif %}
   
@@ -27,7 +31,7 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
+    <input type="submit" value="Sign In" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
   
@@ -35,3 +39,6 @@
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
   
 {% endblock %}
+
+<!-- READ to customize form.username and form.password
+https://docs.djangoproject.com/en/dev/ref/forms/widgets/#django.forms.Widget.attrs -->
