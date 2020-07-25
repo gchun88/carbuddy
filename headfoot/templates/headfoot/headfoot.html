@@ -25,9 +25,17 @@
     <div class="container-fluid">
         <div class="row">
             <div id="company-name" class="col-sm">
-                <a href="{% url 'index' %}">CARBUDDY</a></div>
+                <a href="{% url 'index' %}">CARBUDDY</a>
+            </div>
             <div class="col-sm"></div>
-            <div class="col-sm"><span style="font-size: 12px" id="login">Log In</span></div>
+            <div id="loginSection" class="col-sm">
+              {% if user.is_authenticated %}
+                <span id="logout"><a href="{% url 'logout'%}?next={{request.path}}">Sign Out</a></span>
+                <span id="loginMessage"> Hi  {{ user.get_username }}</span>
+              {% else %}
+                <span style="font-size: 15px" id="login"><a href="{% url 'login' %}?next={{request.path}}">Sign In</a></span>
+              {% endif %}
+            </div>
 
                 </div>
         </div>
