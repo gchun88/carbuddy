@@ -15,20 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from . import views
+from carbuddy import views as views_carbuddy
 from listing import views as views_listing
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('',views.index, name='index'),
+    path('',views_carbuddy.index, name='index'),
     path('admin/', admin.site.urls),
-    path('carmodels/',views.testlink2,),
+    path('carmodels/',views_carbuddy.testlink2,),
     path('carmodels/details/',views_listing.details, name='car_details'),
     path('carmodels/details2/',views_listing.details2, name='car_details2'),
     #path('carmodels/',include('listing.urls')),
-    path('list/', views.CarInstanceListView.as_view(), name='car_list'),
+    path('list/', views_listing.CarInstanceListView.as_view(), name='car_list'),
     
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

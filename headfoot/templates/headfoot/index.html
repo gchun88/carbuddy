@@ -1,0 +1,146 @@
+{% extends "headfoot/headfoot.html" %}
+
+<head>
+{% block header_add %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
+
+{% endblock %}
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+{% block content %}
+
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
+
+<div class="slideshow-container">
+
+<div class="autoSlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="autoSlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="autoSlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src={% static 'testimage.png' %} style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src={% static 'testimage.png' %} style="width:100%">
+    <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src={% static 'testimage.png' %} style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+var autuslideIndex = 0;
+autoshowSlides();
+
+function autoshowSlides() {
+  var i;
+  var slides = document.getElementsByClassName("autoSlides");
+  var dots = document.getElementsByClassName("autodot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  autoslideIndex++;
+  if (autoslideIndex > slides.length) {autoslideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[autoslideIndex-1].style.display = "block";
+  dots[autoslideIndex-1].className += " active";
+  setTimeout(autoslideIndex, 2000); // Change image every 2 seconds
+}
+</script>
+{% endblock %}
+</body>
+

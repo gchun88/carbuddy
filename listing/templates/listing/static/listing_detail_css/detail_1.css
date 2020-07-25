@@ -4,15 +4,14 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
 }
-#LowestPrice{
 
+#LowestPrice {
 padding-left: 30px;
 padding-top: 20px;
 background: #DFDFDF;
-
 font-family: Arial;
 font-weight: bold;
 font-size: 21px;
@@ -58,15 +57,13 @@ letter-spacing: -0.015em;
 
 
 #deal-options-preowned{
-    font-family: Al Nile;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 40px;
     /* identical to box height, or 133% */
-
     letter-spacing: -0.04em;
-
     color: #a09a9a;
 }
 

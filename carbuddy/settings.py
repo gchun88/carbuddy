@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'headfoot',
     'listing',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,7 +127,7 @@ STATIC_URL = '/static/'
 
 # Deployment settings.py
 #STATICFILES_DIRS - > this is a list of static folders' paths for different apps
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "listing/templates/listing/static"),os.path.join(BASE_DIR, "carbuddy/templates/carbuddy/static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "listing/templates/listing/static"),os.path.join(BASE_DIR, "carbuddy/templates/carbuddy/static"),os.path.join(BASE_DIR, "headfoot/templates/headfoot/static")]
 #STATIC_ROOT is a path for one general static folder that migate everything into one
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 #MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
