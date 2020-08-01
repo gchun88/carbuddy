@@ -22,11 +22,26 @@
     }
   </script>
   <div class="search-filter">
+
     <button onclick='myFunc()'>SHOW FILTER</button>
     <div id="filterPage">
-      this is the filter page
+      <ul>
+        <li>Make</li>
+        <li>Type</li>
+        <li>Year</li>
+        <li>Price/Monthly Payment</li>
+        <li>Mileage</li>
+        <li>Features</li>
+        <li>Size</li>
+        <li>Exterior Color</li>
+        <li>Interior Color</li>
+        <li>Transmission</li>
+        <li>Cylinders</li>
+        <li>MPG Highway</li>
+        <li>Status</li>
+      </ul>
     </div>
-    <div class="filter-container">
+    <!-- <div class="filter-container">
   	  <form method="GET" action=".">
         <div class="location-filter-container">
           <label for="brand">Location</label>
@@ -78,7 +93,7 @@
          </div>
          <input type="submit" name="submit" id="filterButton" value="filter">
   	  </form>
-    </div>
+    </div> -->
 
     <div class="car-list-container">
       {% if carinstance_list %}
