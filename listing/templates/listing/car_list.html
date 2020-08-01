@@ -11,10 +11,23 @@
         </form>
       </div>
     </div> -->
+  <script> 
+    myFunc = () => {
+      let x = document.getElementById("filterPage");
+      if(x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+  </script>
   <div class="search-filter">
+    <button onclick='myFunc()'>SHOW FILTER</button>
+    <div id="filterPage">
+      this is the filter page
+    </div>
     <div class="filter-container">
   	  <form method="GET" action=".">
-
         <div class="location-filter-container">
           <label for="brand">Location</label>
           <select class="city-filter">
