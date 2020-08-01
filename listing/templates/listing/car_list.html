@@ -12,19 +12,25 @@
       </div>
     </div> -->
   <script> 
-    myFunc = () => {
-      let x = document.getElementById("filterPage");
-      if(x.style.display === 'none') {
-        x.style.display = 'block';
-      } else {
-        x.style.display = 'none';
-      }
-    }
+    // myFunc = () => {
+    //   let x = document.getElementById("filterPage");
+    //   if(x.style.display === 'none') {
+    //     x.style.display = 'block';
+    //   } else {
+    //     x.style.display = 'none';
+    //   }
+    // }
+    $(document).ready(function() {
+      $("button").click(function(e) {
+        e.preventDefault();
+        $(".basePage, .filterPage").fadeToggle();
+      });
+    });
   </script>
   <div class="search-filter">
-
-    <button onclick='myFunc()'>SHOW FILTER</button>
-    <div id="filterPage">
+    <div class="basePage"></div>
+    <div class="filterPage">
+      <button>X</button>
       <ul>
         <li>Make</li>
         <li>Type</li>
@@ -41,6 +47,9 @@
         <li>Status</li>
       </ul>
     </div>
+    <button>SHOW FILTER</button>
+
+
     <!-- <div class="filter-container">
   	  <form method="GET" action=".">
         <div class="location-filter-container">
