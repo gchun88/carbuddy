@@ -6,7 +6,11 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
 {% endblock %}
 </head>
 
@@ -20,38 +24,22 @@
 
 <body>
 {% block content %}
-
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
-
-<div class="slideshow-container">
-
-<div class="autoSlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+<div class="">
+<div class="col-lg-1">
+<div id="slideshow">
+   <div>
+     <img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+   </div>
+   <div>
+     <img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+   </div>
+   <div>
+     Pretty cool eh? This slide is proof the content can be anything.
+   </div>
+</div>
 </div>
 
-<div class="autoSlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
 
-<div class="autoSlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
 
 
 <a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
@@ -64,19 +52,19 @@
 
 <div class="slideshow-container">
 
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">1 / 3</div>
   <img src={% static 'testimage.png' %} style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides">
     <div class="numbertext">2 / 3</div>
     <img src={% static 'testimage.png' %} style="width:100%">
     <div class="text">Caption Two</div>
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides">
   <div class="numbertext">3 / 3</div>
   <img src={% static 'testimage.png' %} style="width:100%">
   <div class="text">Caption Three</div>
@@ -92,6 +80,8 @@
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
 </div>
 <script>
 var slideIndex = 1;
@@ -121,25 +111,20 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var autuslideIndex = 0;
-autoshowSlides();
 
-function autoshowSlides() {
-  var i;
-  var slides = document.getElementsByClassName("autoSlides");
-  var dots = document.getElementsByClassName("autodot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  autoslideIndex++;
-  if (autoslideIndex > slides.length) {autoslideIndex = 1}
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[autoslideIndex-1].style.display = "block";
-  dots[autoslideIndex-1].className += " active";
-  setTimeout(autoslideIndex, 2000); // Change image every 2 seconds
-}
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
+
 </script>
 {% endblock %}
 </body>

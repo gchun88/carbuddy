@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+
+</head>
+
+<body>
+<div class="slide1">
+    <img src="{% static 'testimage.png' %}">
+</div>
+
+<div class="slide1">
+    <img src="{% static 'search.png' %}">
+</div>
+<script>
+    var i = 0;
+    var images=[];
+    var time = 3000;
+
+
+    //image list
+    images[0] = "{% static 'testimage.png' %}";
+    images[1] = "{% static 'search.png' %}";
+    images[2] = "{% static 'testimage.png' %}";
+
+    //change Image
+
+    function changeImg() {
+        document.slide.src = images[i];
+        if(i < images.length - 1){
+             i++;
+        } else {
+            i = 0;
+        }
+
+        setTimeout("changeImg()",time);
+    }
+    window.onload = changeImg;
+</script>
+
+</body>
