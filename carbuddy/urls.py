@@ -19,17 +19,16 @@ from carbuddy import views as views_carbuddy
 from listing import views as views_listing
 from django.conf import settings
 from django.conf.urls.static import static
-
+from headfoot import views as views_headfoot
 
 urlpatterns = [
     path('',views_carbuddy.index, name='index'),
     path('admin/', admin.site.urls),
     path('carmodels/',views_carbuddy.testlink2,),
     path('carmodels/details/',views_listing.details, name='car_details'),
-    path('carmodels/details2/',views_listing.details2, name='car_details2'),
     #path('carmodels/',include('listing.urls')),
     path('list/', views_listing.CarInstanceListView.as_view(), name='car_list'),
-    
+    path('test/',views_headfoot.test ),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

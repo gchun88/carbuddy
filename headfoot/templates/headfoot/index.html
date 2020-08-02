@@ -6,7 +6,11 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
 {% endblock %}
 </head>
 
@@ -20,38 +24,29 @@
 
 <body>
 {% block content %}
+<div class="">
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+<div class="col-lg-1">
 
-<div class="slideshow-container">
 
-<div class="autoSlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+<h2 class="slideshow-practice-out">Automatic Slideshow</h2>
+
+<div class="slideshow-practice">
+  <img class="main-slide-2" src="{% static 'testimage.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-2" src="{% static 'search.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-2" src="{% static 'googlelogo.png' %}" style="width:300px; height:200px">
+
+
+    <button class="position-button-2" onclick="slideAutomation_2(1)">.</button>
+    <button class="position-button-2" onclick="slideAutomation_2(2)">.</button>
+    <button class="position-button-2" onclick="slideAutomation_2(3)">.</button>
+</div>
 </div>
 
-<div class="autoSlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
 
-<div class="autoSlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
 
-</div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
+
 
 
 <a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
@@ -62,84 +57,31 @@
 <a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
 
 
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src={% static 'testimage.png' %} style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src={% static 'testimage.png' %} style="width:100%">
-    <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src={% static 'testimage.png' %} style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
+<div class="col-lg-1">
+
+
+    <h2 class="slideshow-practice-out">Manual Slideshow</h2>
+
+<div class="slideshow-practice">
+  <img class="main-slide-1" src="{% static 'testimage.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-1" src="{% static 'search.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-1" src="{% static 'googlelogo.png' %}" style="width:300px; height:200px">
+
+
+  <button class="left-slide-button-1" onclick="slide_arrow_1(-1)">&#10094;</button>
+  <button class="right-slide-button-1" onclick="slide_arrow_1(1)">&#10095;</button>
+    <button class="position-button-1" onclick="position_Button_1(1)">.</button>
+    <button class="position-button-1" onclick="position_Button_1(2)">.</button>
+    <button class="position-button-1" onclick="position_Button_1(3)">.</button>
 </div>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+</div>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    <script src="{% static 'index_javascript/index_slider.js' %}">
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-var autuslideIndex = 0;
-autoshowSlides();
-
-function autoshowSlides() {
-  var i;
-  var slides = document.getElementsByClassName("autoSlides");
-  var dots = document.getElementsByClassName("autodot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  autoslideIndex++;
-  if (autoslideIndex > slides.length) {autoslideIndex = 1}
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[autoslideIndex-1].style.display = "block";
-  dots[autoslideIndex-1].className += " active";
-  setTimeout(autoslideIndex, 2000); // Change image every 2 seconds
-}
 </script>
 {% endblock %}
 </body>
