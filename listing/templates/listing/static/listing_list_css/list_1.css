@@ -41,6 +41,7 @@
 
 .filterPage ul {
   list-style: none;
+  text-align: left;
 }
 
 .search-box {
