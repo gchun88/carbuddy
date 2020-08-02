@@ -19,7 +19,7 @@
     });
 
     // // need to fix, currently not working
-    // $("form").on("submit", (function(e) { 
+    // $("#filterForm").submit(function(e) {
     //   e.preventDefault();
     //   $.ajax({ 
     //     url: $(this).attr('action'), 
@@ -31,13 +31,17 @@
     //         $('#p1').html(response); // 
     //     }
     //   });
-    // }));
+    // });
 
-    // window.onload = () => {
-    //   document.getElementById('submitFilterForm').addEventListener("click", myFunc, false);
-    // }
+    window.onload = () => {
+      document.getElementById('filterForm').addEventListener("submit", myFunc);
+      document.getElementById('filterForm').addEventListener("submit", myFunc2);
+    }
+
     myFunc = (event) => {
+      // // if event.preventDefault(), it stops the form from sending a request to the server
       event.preventDefault();
+
       let a = document.getElementById("carBrand").value;
       let b = document.getElementById("carType").value;
       let c = document.getElementById("carYear").value;
@@ -45,15 +49,21 @@
       let e = document.getElementById("carMileage").value;
 
       document.getElementById("p1").innerHTML = a + '<br />' + b + '<br />' + c + '<br />' + d + '<br />' + e + '<br />';
+      //this "submits"(sends request to server)
+      return true;
     }
+    myFunc2 = () => {
+      $(".basePage, .filterPage").fadeToggle();
+    }
+
   </script>
 
   <div class="search-filter">
-    <div class="basePage"></div>
-    <div class="filterPage">
-      <form id="filterForm" action="#" method="GET" onsubmit="return myFunc(event)">  
+    <div class="basePage" id="basePage"></div>
+    <div class="filterPage" id="filterPage">
+      <form id="filterForm" action="#" method="GET">  
         {% csrf_token %}
-        <input type="submit" id="submitFilterForm" value="submit">
+        <input type="submit" id="submitFilterForm" value="submit" > 
         <button>X</button>
         <ul>
           <li>Make
