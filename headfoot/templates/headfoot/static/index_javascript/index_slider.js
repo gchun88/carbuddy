@@ -4,12 +4,13 @@ var slideIndex2 = 1;
 var slidetest = false;
 
 
-
+console.log(1);
 
 slideArrow_1(slideIndex1);
 slidePosition_1(slideIndex1);
 // slidePosition_2(slideIndex2);
-autoslides_2()
+autoslides_2();
+matilda();
 
 // if(!slidetest){
 //   autoslides_2();
@@ -65,11 +66,11 @@ function slidePosition_2(j) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex2-1].className += " active";
-// if (slidetest == true){
-//   slidetest = false;
-// }
-// else {slidetest = true}
-//  slidetest = true;
+  // if (slidetest == true){
+  //   slidetest = false;
+  // }
+  // else {slidetest = true}
+  //  slidetest = true;
   slidetest = true;
   autoslides_2()
 }
@@ -96,6 +97,18 @@ function autoslides_2() {
   setTimeout(autoslides_2, 2000); // Change image every 2 seconds
 }
 // === absolute equal == when memory path is different == still shows true
+
+
+
+function matilda(){
+  var i;
+  var mtd = document.getElementsByClassName("main-slide-3");
+  for(i = 0; i < mtd.length; i++){
+  mtd[i].style.display = "none";
+  }
+  mtd[0].style.display = "block";
+  console.log(mtd[2])
+}
 
 
 

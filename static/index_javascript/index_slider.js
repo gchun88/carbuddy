@@ -4,12 +4,15 @@ var slideIndex2 = 1;
 var slidetest = false;
 
 
+var heejae = 1;
+console.log(heejae);
 
 
 slideArrow_1(slideIndex1);
 slidePosition_1(slideIndex1);
-slidePosition_2(slideIndex2);
-autoslides_2()
+// slidePosition_2(slideIndex2);
+autoslides_2();
+matilda();
 
 // if(!slidetest){
 //   autoslides_2();
@@ -65,15 +68,13 @@ function slidePosition_2(j) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex2-1].className += " active";
-// if (slidetest == true){
-//   slidetest = false;
-// }
-// else {slidetest = true}
-//  slidetest = true;
-// autoslides_2()
-
+  // if (slidetest == true){
+  //   slidetest = false;
+  // }
+  // else {slidetest = true}
+  //  slidetest = true;
   slidetest = true;
-
+  autoslides_2()
 }
 
 
@@ -81,7 +82,11 @@ function autoslides_2() {
   var i;
   var slides = document.getElementsByClassName("main-slide-2");
   var dots = document.getElementsByClassName("position-button-2");
-  for (i = 0; i < slides.length; i++) {
+  if (slidetest == true){
+    slidetest = false;
+    return false
+  }
+  for(i = 0; i < slides.length; i++){
     slides[i].style.display = "none";
   }
   slideIndex2++;
@@ -92,12 +97,20 @@ function autoslides_2() {
   slides[slideIndex2-1].style.display = "block";
   dots[slideIndex2-1].className += " active";
   setTimeout(autoslides_2, 2000); // Change image every 2 seconds
-  if (slidetest == true){
-    slidetest = false;
-    return null;
-  }
 }
 // === absolute equal == when memory path is different == still shows true
+
+
+
+function matilda(){
+  var i;
+  var mtd = document.getElementsByClassName("main-slide-3");
+  for(i = 0; i < mtd.length; i++){
+  mtd[i].style.display = "none";
+  }
+  mtd[1].style.display = "block";
+  console.log(mtd[1])
+}
 
 
 

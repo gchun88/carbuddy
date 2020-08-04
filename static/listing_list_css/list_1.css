@@ -1,145 +1,174 @@
 .header {
-	width: 100%;
-	overflow:hidden;
+  width: 100%;
+  overflow:hidden;
 }
 
 #company-name {
-	margin: 5px 0px 0px 0px;
-	font-size: 2.5em;
-	font-weight: bold;
+  margin: 5px 0px 0px 0px;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 #company-name a {
-	color: black;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+#p1 {
+  background-color: red;
 }
 
-#filterPage {
-	display: none;
+.basePage {
+  position:absolute;
+  display:none; 
+  /* color with alpha transparency */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* stretch to screen edges */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.filterPage {
+  position: absolute;
+  width: 300px;
+  height: 350px;
+  display: none;
+  background-color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -75px;
+}
+
+.filterPage ul {
+  list-style: none;
+  text-align: left;
 }
 
 .search-box {
-	padding: 20px;
-	width: 100%;
-	position: relative;
-	display: flex;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
 .search-box input[type="text"] {
-	width: 10w0%;
-	border: 3px solid blue;
-	border-right: none;
-	padding: 5px;
-	height: 36px;
-	border-radius: 5px 0 0 5px;
-	outline: none;
-	color: #9DBFAF;
+  width: 10w0%;
+  border: 3px solid blue;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
 
 .search-box button {
-	width: 40px;
-	height: 36px;
-	border: 1px solid blue;
-	background: blue;
-	text-align: center;
-	color: #fff;
-	border-radius: 0 5px 5px 0;
-	cursor: pointer;
-	font-size: 20px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid blue;
+  background: blue;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 #login {
-	margin: 40px 0px 0px 0px;
-	float: right;
+  margin: 40px 0px 0px 0px;
+  float: right;
 }
 
 #login a {
-	color: black;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .nav-bar {
-	display: table;
-	width: 100%;
-    list-style: none;
-    font-size: 1em;
-    padding: 0px 0px;
-    margin: 0px 0px;
+  display: table;
+  width: 100%;
+  list-style: none;
+  font-size: 1em;
+  padding: 0px 0px;
+  margin: 0px 0px;
 }
 
 .nav-bar li {
-	display: table-cell;
-	background-color: grey;
-	padding: 10px;
-	text-align: center;
+  display: table-cell;
+  background-color: grey;
+  padding: 10px;
+  text-align: center;
 }
 
 .nav-bar li a {
-	color: black;
-	text-decoration: none;	
+  color: black;
+  text-decoration: none;	
 }
 
 .nav-bar li a:hover {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 
 .search-filter {
-	text-align: center;
+  text-align: center;
 }
 
 .filter-container {
-	clear: both;
+  clear: both;
 }
 
 .city-filter {
-	width: 150px;
+  width: 150px;
 } 
 
 .state-filter, .brand-filter, .year-filter {
-	width: 100px;
+  width: 100px;
 }
 
 
 .car-list-container {
-	border-top: 1px solid black;
-	margin-top: 30px;
+  border-top: 1px solid black;
+  margin-top: 30px;
 }
 
 .car-list {
-	list-style: none;
+  list-style: none;
 }
 
 .car-list li {
-	display: flex;
+  display: flex;
 }
 
 .car-image {
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
 .car-info {
-	margin-top: 8px;
-	text-align: left;
+  margin-top: 8px;
+  text-align: left;
 }
 
 .car-info p {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #loginSection span {
-	margin: 40px 0px 0px 0px;
-	float: right;
+  margin: 40px 0px 0px 0px;
+  float: right;
 }
 
 #logout {
-	padding-left: 20px;
+  padding-left: 20px;
 }
 
 #logout a {
-	color: black;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
