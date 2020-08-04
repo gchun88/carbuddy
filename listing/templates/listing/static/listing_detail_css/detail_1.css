@@ -5,12 +5,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 20px;
 }
 #LowestPrice{
 
-padding-left: 30px;
-padding-top: 20px;
+padding-left: 20px;
+padding-top: 25px;
+    padding-bottom: 25px;
 background: #DFDFDF;
 
 font-family: Arial;
@@ -27,6 +28,7 @@ letter-spacing: -0.015em;
 #car-keyword-tags{
     background: #C4C4C4;
     border-radius: 4px;
+    font-family: "Crimson Pro" ;
 }
 
 #deal-options-lease{
@@ -82,3 +84,9 @@ letter-spacing: -0.015em;
     color: #a09a9a;
 }
 
+#offer-card{
+    width: 60rem;
+    margin-top: 30px;
+    margin-left: 70px;
+    font-family: Arial;
+}

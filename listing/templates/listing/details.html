@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'listing_detail_css/detail_1.css' %}" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Crimson+Pro' rel='stylesheet'>
     <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
     <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
     <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
@@ -36,46 +37,71 @@
 
 
 {% comment %}{{ a }} {% endcomment %}
-<div class="section">
+<div class="section" style="background-color:#F8F7F7; padding-bottom: 100px">
     <div class="container">
-<div class="row">
-<div class="col-md-7 container">
-    <img class="detail-car-image" src="{% static 'testimage.png' %}" alt="GLA250 SUV" style="width:688px; height:602px; padding-top: 50px">
-</h5>
-</div>
-<div class="col-sm" style="padding-left: 50px">
 
-<h5>Mercedes-Benz</h5>
-    <h1 style="font-weight: bold;">GLA250 SUV</h1><br>
-<div class="row">
-<div class="col-md-5" id="year-engine-msrp" >
-    Launch Year<br><br>
-Engine<br><br>
-Starting MSRP<br><br>
-</div>
-<div class="col-md-5" id="year-engine-msrp" >
-    2021<br><br>
-2.0L inline-4 turbo<br><br>
-$36,230<br><br>
+<!-- vehicle detail -->
+<div class="row" style="padding-top: 100px">
+
+<!-- vehicle detail: image -->
+<div class="col-6 container">
+    <img class="detail-car-image" src="{% static 'testimage.png' %}" alt="GLA250 SUV"
+         style="width:600px; height:590px; padding: 100px 0px 80px 0px; background-color: white">
 </div>
 
-</div>
-<div id="LowestPrice" class="container-fluid">
+<!-- vehicle detail: info -->
+<div class="col-6" style="padding-left: 100px; padding-bottom: 150px">
 
-    <div class="container">
-        <div class="col-lg-10">Lowest Price<br><br><h5 style="padding-left: 50px">Lease<br>New<br>Pre-Owned<br></h5>
+    <!-- vehicle detail: info - Car type -->
+    <div style="font-family: Arial">
+        <h5>Mercedes-Benz</h5>
+        <h1 style="font-weight: bold;  ">GLA250 SUV</h1><br>
+    </div>
+
+    <!-- vehicle detail: info - year-engine-msrp  -->
+    <div class="row" >
+
+        <div class="col-md-5" id="year-engine-msrp" style="font-weight: bold;">
+            Launch Year<br><br>
+            Engine<br><br>
+            Starting MSRP<br><br>
+        </div>
+
+        <div class="col-md-6" id="year-engine-msrp" >
+            2021<br><br>
+            2.0L inline-4 turbo<br><br>
+            $36,230<br><br>
+        </div>
+
+    </div>
+
+    <!-- vehicle detail: info - Lowest Price  -->
+    <div id="LowestPrice" class="container-fluid" style="margin-bottom: 20px">
+        <div class="container">
+            <div class="col-lg-10">
+                <h5 style="font-style: italic; font-weight: bold">Lowest Price<br></h5>
+                <h5 style="line-height: 30px; padding-left: 20px">
+                    Lease<br>
+                    New<br>
+                    Pre-Owned<br>
+                </h5>
             </div>
-</div>
-</div>
-    <br>
+        </div>
+    </div>
+
+    <!-- vehicle detail: info - Tags  -->
+    <br><br>
+
     <div class="container-fluid row">
-    <div class="col-sm-3" id="car-keyword-tags">
-       #Mercedes </div>
-        <div class ="col-sm-3" id="car-keyword-tags">
-        #SUV </div>
-
-
-<div class="col-sm-5" id="car-keyword-tags">#Turbo Torque</div>
+        <p class="col-sm-3" id="car-keyword-tags">
+            #Mercedes</p>
+        <div class="col-sm-1"></div>
+        <p class ="col-sm-3" id="car-keyword-tags">
+            #SUV</p>
+        <div class="col-sm-1"></div>
+        <p class="col-sm-5" id="car-keyword-tags">
+            #Turbo Torque</p>
+        <div class="col-sm-1"></div>
 </div>
     </div>
         </div>
@@ -85,32 +111,46 @@ $36,230<br><br>
 
 
 
+<!-- Zip code and Trim Level-->
+<h4 style="font-family: 'Arial'; color: #888e92; font-size: medium"> Preference </h4>
+<div style="margin-bottom: 100px;">
 
+    <div class="input-group flex-nowrap" style="margin-bottom: 10px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Zipcode</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Zipcode" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
 
-<div class="container row custom-select" style=";">
-  <p><label for="zipcode">Zipcode:</label></p>
-    <input type="text" id="" name=""><br><br>
-  <p><select style="background: #EAEAEA;">
-    <option value="0">Trim Level</option>
-    <option value="1">Level 1</option>
-    <option value="2">Level 2</option>
-    <option value="3">Level 3</option>
-    <option value="4">Level 4</option>
-  </select></p>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button"
+              id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Trim Level
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Level 1</a>
+            <a class="dropdown-item" href="#">Level 2</a>
+            <a class="dropdown-item" href="#">Level 3</a>
+          </div>
+    </div>
+
 </div>
+
+
 
 <div class ="row container-fluid">
 
-    <div  class ="col"><button id="deal-options-lease" onclick="myFunction()">Lease Offer</button></div>
-    <div class ="col"><button id="deal-options-new" onclick="myFunction()">New Offer</button></div>
-    <div class ="col"><button id="deal-options-preowned" onclick="myFunction()">Pre-Owned Offer</button></div>
-    <div class ="col"><button id="deal-options-details" onclick="myFunction()">Details</button></div>
+    <div  class ="col"><button id="deal-options-lease" onclick="myFunction1()">Lease Offer</button></div>
+    <div class ="col"><button id="deal-options-new" onclick="myFunction2()">New Offer</button></div>
+    <div class ="col"><button id="deal-options-preowned" onclick="myFunction3()">Pre-Owned Offer</button></div>
+    <div class ="col"><button id="deal-options-details" onclick="myFunction4()">Details</button></div>
 </div>
 <!-- Surround the select box within a "custom-select" DIV element.
 Remember to set the width: -->
 
 
 <h1 style="/* Line 3 */
+margin-top: 30px;
 border: 1px solid #CECEC4;"></h1>
 
 
@@ -120,31 +160,106 @@ border: 1px solid #CECEC4;"></h1>
 
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
+function myFunction1() {
+  document.getElementById("demo").innerHTML = "" +
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Los Angeles, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$300.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n" +
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Pasadena, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$360.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n"+
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Santa Monica, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$400.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n";
 }
 </script>
 
-<div class="container">
-    <div>
-        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-    </div>
-    <div>
-        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
-    <div>
-        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-    </div>
-    <div>
-        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
-    <div>
-        <h5 style="padding-left: 100px">Los Angeles, CA</h5><br>
-    </div>
-    <div>
-        <h1 style="font-weight: 900;">$355.50 ~</h1></div><br><br>
-</div>
 
 
+ <script>
+function myFunction2() {
+  document.getElementById("demo").innerHTML = "" +
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Fullerton, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$500.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n" +
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Glendale, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$600.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n"+
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Malibu, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$700.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n";
+}
+</script>
+
+
+
+<script>
+function myFunction3() {
+  document.getElementById("demo").innerHTML = "" +
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Torrance, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$350.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n" +
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Anaheim, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$200.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n"+
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\">Long Beach, CA</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">$250.50 ~</h1><br><br>"+
+        "</div>\n"+
+      "</div>\n";
+}
+</script>
+
+
+
+<script>
+function myFunction4() {
+  document.getElementById("demo").innerHTML = "" +
+
+      "<div class='card' id='offer-card'> \n" +
+        "<div class='card-body'> \n" +
+            "<h5 style=\"padding-left: 250px; padding-top: 30px; font-weight: 100\"> Detail Updates</h5><br>\n" +
+            "<h1 style=\"padding-left: 40px; font-weight: 500; font-size: 120\">Price? </h1><br><br>"+
+        "</div>\n"+
+      "</div>\n";
+}
+</script>
+
     </div>
+
+
+
 </div>
 </body>
 {% endblock %}
