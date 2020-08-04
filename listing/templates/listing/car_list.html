@@ -1,20 +1,169 @@
-{% extends "base_generic.html" %}
+{% extends "headfoot/headfoot.html" %}
 
 {% block content %}
 
-  <!-- <div class="search_filter">
-    <div class="search-box-container">
-      <div class="search-box">
-        <form method="post" action="#">
-          <input type="text" name="search" id="textSearch" placeholder="Search">
-          <input type="submit" name="submit" id="searchButton" value="">
-        </form>
-      </div>
-    </div> -->
-  <div class="search-filter">
-    <div class="filter-container">
-  	  <form method="GET" action=".">
+  <script> 
+    // myFunc = () => {
+    //   let x = document.getElementById("filterPage");
+    //   if(x.style.display === 'none') {
+    //     x.style.display = 'block';
+    //   } else {
+    //     x.style.display = 'none';
+    //   }
+    // }
+    $(document).ready(function() {
+      $("button").click(function(e) {
+        e.preventDefault();
+        $(".basePage, .filterPage").fadeToggle();
+      });
+    });
 
+    // // need to fix, currently not working
+    // $("#filterForm").submit(function(e) {
+    //   e.preventDefault();
+    //   $.ajax({ 
+    //     url: $(this).attr('action'), 
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     data: $(this).serialize(), 
+        
+    //     success: function(response) { 
+    //         $('#p1').html(response); // 
+    //     }
+    //   });
+    // });
+
+    window.onload = () => {
+      document.getElementById('filterForm').addEventListener("submit", myFunc);
+      document.getElementById('filterForm').addEventListener("submit", myFunc2);
+    }
+
+    myFunc = (event) => {
+      // // if event.preventDefault(), it stops the form from sending a request to the server
+      event.preventDefault();
+
+      let a = document.getElementById("carBrand").value;
+      let b = document.getElementById("carType").value;
+      let c = document.getElementById("carYear").value;
+      let d = document.getElementById("carPayment").value;
+      let e = document.getElementById("carMileage").value;
+
+      document.getElementById("p1").innerHTML = a + '<br />' + b + '<br />' + c + '<br />' + d + '<br />' + e + '<br />';
+      //this "submits"(sends request to server)
+      return true;
+    }
+    myFunc2 = () => {
+      $(".basePage, .filterPage").fadeToggle();
+    }
+
+  </script>
+
+  <div class="search-filter">
+    <div class="basePage" id="basePage"></div>
+    <div class="filterPage" id="filterPage">
+      <form id="filterForm" action="#" method="GET">  
+        {% csrf_token %}
+        <input type="submit" id="submitFilterForm" value="submit" > 
+        <button>X</button>
+        <ul>
+          <li>Make
+            <select name="carBrand" id="carBrand">
+              <option value="null">Select Brand</option>
+              <option value="bmw">BMW</option>
+              <option value="mercedes">Mercedes-Benz</option>
+              <option value="tesla">Tesla</option>    
+            </select>
+          </li>
+          <li>Type
+            <select name="carType" id="carType">
+              <option value="null">Select Type</option>
+              <option value="sedan">Sedan</option>
+              <option value="coupe">Coupe</option>
+              <option value="sportscar">Sports Car</option>
+              <option value="stationwagon">Station Wagon</option>
+              <option value="hatchback">Hatchback</option>
+              <option value="convertible">Convertible</option>
+              <option value="suv">SUV</option>
+              <option value="minivan">Minivan</option>
+              <option value="pickuptruck">Pickup Truck</option>
+            </select>
+          </li>
+          <li>Year
+            <select name="carYear" id="carYear">
+              <option value="null">Select Year</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>            
+            </select>
+          </li>
+          <li>Monthly Payment
+            <select name="carPayment" id="carPayment">
+              <option value=null>Select Payment</option>
+              <option value="100">$0 - $100</option>
+              <option value="200">$101 - $200</option>
+              <option value="300">$201 - $300 </option>
+              <option value="400">$300 - $400</option>
+              <option value="above">$401+</option>
+            </select>
+          </li>
+          <li>Mileage
+            <select name="carMileage" id="carMileage">
+              <option value="null">Select Mileage</option>
+              <option value="10000">0 - 10,000</option>
+              <option value="20000">10,000 - 20,000</option>
+              <option value="30000">20,000 - 30,000 </option>
+              <option value="40000">30,000 - 40,000</option>
+              <option value="above">40,001+</option>
+            </select>
+          </li>
+          <li>Features<br>
+            <input type="checkbox" id="feature1" name="feature1" value="feature1">
+            <label for="feature1">Feature 1</label><br>
+            <input type="checkbox" id="feature2" name="feature2" value="feature2">
+            <label for="feature2">Feature 2</label><br>
+            <input type="checkbox" id="feature3" name="feature3" value="feature3">
+            <label for="feature3">Feature 3</label><br>
+          </li>
+          <li>Size<br>
+            <input type="checkbox" id="sizeSmall" name="sizeSmall" value="sizeSmall">
+            <label for="sizeSmall">Small</label><br>
+            <input type="checkbox" id="sizeMedium" name="sizeMedium" value="sizeMedium">
+            <label for="sizeMedium">Medium</label><br>
+            <input type="checkbox" id="sizeLarge" name="sizeLarge" value="sizeLarge">
+            <label for="sizeLarge">Large</label><br>
+          </li>
+          <li>Exterior Color
+          </li>
+          <li>Interior Color
+          </li>
+          <li>Transmission
+          </li>
+          <li>Cylinders
+          </li>
+          <li>MPG Highway
+          </li>
+          <li>Status
+          </li>
+        </ul>
+      </form>
+    </div>
+    <button>FILTER</button>
+
+    <div class="selectedFilters">
+      render chosen options here
+      <p id="p1"></p>
+    </div>
+
+    <!-- <div class="filter-container">
+  	  <form method="GET" action=".">
         <div class="location-filter-container">
           <label for="brand">Location</label>
           <select class="city-filter">
@@ -65,7 +214,7 @@
          </div>
          <input type="submit" name="submit" id="filterButton" value="filter">
   	  </form>
-    </div>
+    </div> -->
 
     <div class="car-list-container">
       {% if carinstance_list %}

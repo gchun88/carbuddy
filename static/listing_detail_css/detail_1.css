@@ -1,0 +1,82 @@
+
+
+#year-engine-msrp {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#LowestPrice {
+padding-left: 30px;
+padding-top: 20px;
+background: #DFDFDF;
+font-family: Arial;
+font-weight: bold;
+font-size: 21px;
+line-height: 30px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: first;
+text-align: left;
+letter-spacing: -0.015em;
+}
+
+#car-keyword-tags{
+    background: #C4C4C4;
+    border-radius: 4px;
+
+}
+
+#deal-options-lease{
+    font-family: Al Nile;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: -0.04em;
+
+    color: #4B4907;
+}
+
+#deal-options-new{
+    font-family: Al Nile;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: -0.04em;
+
+    color: #a09a9a;
+}
+
+
+#deal-options-preowned{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height, or 133% */
+    letter-spacing: -0.04em;
+    color: #a09a9a;
+}
+
+#deal-options-details{
+    font-family: Al Nile;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height, or 133% */
+
+    letter-spacing: -0.04em;
+
+    color: #a09a9a;
+}
+

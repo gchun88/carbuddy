@@ -1,0 +1,88 @@
+{% extends "headfoot/headfoot.html" %}
+
+<head>
+{% block header_add %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index_css/index.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
+    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
+{% endblock %}
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+{% block content %}
+<div class="">
+
+<div class="col-lg">
+
+
+<h2 class="slideshow-practice-out">Automatic Slideshow</h2>
+
+<div class="slideshow-practice">
+  <img class="main-slide-2" src="{% static 'testimage.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-2" src="{% static 'search.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-2" src="{% static 'googlelogo.png' %}" style="width:300px; height:200px">
+
+
+    <button class="position-button-2" onclick="slideAutomation_2(1)">.</button>
+    <button class="position-button-2" onclick="slideAutomation_2(2)">.</button>
+    <button class="position-button-2" onclick="slideAutomation_2(3)">.</button>
+</div>
+</div>
+
+
+
+
+
+
+
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+<a href="."><img src="{% static 'testimage.png' %}" style = "width:100px; height: 100px"></a>
+
+
+
+</div>
+
+<div class="col-lg">
+
+
+    <h2 class="slideshow-practice-out">Manual Slideshow</h2>
+
+<div class="slideshow-practice">
+  <img class="main-slide-1" src="{% static 'testimage.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-1" src="{% static 'search.png' %}" style="width:300px; height:200px">
+  <img class="main-slide-1" src="{% static 'googlelogo.png' %}" style="width:300px; height:200px">
+
+
+  <button class="left-slide-button-1" onclick="slide_arrow_1(-1)">&#10094;</button>
+  <button class="right-slide-button-1" onclick="slide_arrow_1(1)">&#10095;</button>
+    <button class="position-button-1" onclick="position_Button_1(1)">.</button>
+    <button class="position-button-1" onclick="position_Button_1(2)">.</button>
+    <button class="position-button-1" onclick="position_Button_1(3)">.</button>
+</div>
+</div>
+
+    <script src="{% static 'index_javascript/index_slider.js' %}">
+
+
+</script>
+{% endblock %}
+</body>
+
