@@ -2,23 +2,27 @@
 <html lang="en">
 
 <head>
-    {% block title %}<title>Carbuddy</title>{% endblock %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-    <!-- Add additional CSS in static file -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'listing_list_css/list_1.css' %}">
-    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
-    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
-    <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
-{% block header_add %}
-{% endblock %}
+  {% block title %}<title>Carbuddy</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.c  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'listing_list_css/list_1.css' %}">
+  <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap.css' %}" rel='stylesheet'>
+  <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-grid.css' %}" rel='stylesheet'>
+  <link href="{% static '/bootstrap-4.0.0-dist/css/bootstrap-reboot.css' %}" rel='stylesheet'>
+  {% block header_add %}
+  {% endblock %}
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 {% block header %}
 <header>
   <div class="header">
+  <!-- this is creating search icon -->
+
+<!-- Actual search box -->
     <div class="container-fluid">
         <div class="row">
             <div id="company-name" class="col-sm">
