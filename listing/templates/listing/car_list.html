@@ -38,6 +38,8 @@
       document.getElementById('filterForm').addEventListener("submit", myFunc2);
     }
 
+    //this function displays the filters that the user selected
+    //would have to confirm if it sends request to the server, as there is event.preventDefault();
     myFunc = (event) => {
       // // if event.preventDefault(), it stops the form from sending a request to the server
       event.preventDefault();
@@ -48,10 +50,21 @@
       let d = document.getElementById("carPayment").value;
       let e = document.getElementById("carMileage").value;
 
-      document.getElementById("p1").innerHTML = a + '<br />' + b + '<br />' + c + '<br />' + d + '<br />' + e + '<br />';
+      let carFilter = [a, b, c, d, e];
+
+      for(let i = 0; i < carFilter.length; i++) {
+        if(carFilter[i] !== 'null') {
+          document.getElementById("p1").innerHTML += carFilter[i] +'<br />';
+        }
+      }  
+
+      // document.getElementById("p1").innerHTML = a + '<br />' + b + '<br />' + c + '<br />' + d + '<br />' + e + '<br />';
+      
       //this "submits"(sends request to server)
-      return true;
+      // document.getElementById("filterForm").submit();
     }
+
+    //this function closes the filter page once a user submits the form
     myFunc2 = () => {
       $(".basePage, .filterPage").fadeToggle();
     }
@@ -68,56 +81,56 @@
         <ul>
           <li>Make
             <select name="carBrand" id="carBrand">
-              <option value="null">Select Brand</option>
-              <option value="bmw">BMW</option>
-              <option value="mercedes">Mercedes-Benz</option>
-              <option value="tesla">Tesla</option>    
+              <option value="null"></option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Tesla">Tesla</option>    
             </select>
           </li>
           <li>Type
             <select name="carType" id="carType">
-              <option value="null">Select Type</option>
-              <option value="sedan">Sedan</option>
-              <option value="coupe">Coupe</option>
-              <option value="sportscar">Sports Car</option>
-              <option value="stationwagon">Station Wagon</option>
-              <option value="hatchback">Hatchback</option>
-              <option value="convertible">Convertible</option>
-              <option value="suv">SUV</option>
-              <option value="minivan">Minivan</option>
-              <option value="pickuptruck">Pickup Truck</option>
+              <option value="null"></option>
+              <option value="Sedan">Sedan</option>
+              <option value="Coupe">Coupe</option>
+              <option value="Sports Car">Sports Car</option>
+              <option value="Station Wagon">Station Wagon</option>
+              <option value="Hatchback">Hatchback</option>
+              <option value="Convertible">Convertible</option>
+              <option value="SUV">SUV</option>
+              <option value="Minivan">Minivan</option>
+              <option value="Pickup Truck">Pickup Truck</option>
             </select>
           </li>
           <li>Year
             <select name="carYear" id="carYear">
-              <option value="null">Select Year</option>
-              <option value="2020">2020</option>
-              <option value="2019">2019</option>
-              <option value="2018">2018</option>
-              <option value="2017">2017</option>
-              <option value="2016">2016</option>
-              <option value="2015">2015</option>
-              <option value="2014">2014</option>
-              <option value="2013">2013</option>
-              <option value="2012">2012</option>
-              <option value="2011">2011</option>
-              <option value="2010">2010</option>            
+              <option value="null"></option>
+              <option value="Model Year: 2020">2020</option>
+              <option value="Model Year: 2019">2019</option>
+              <option value="Model Year: 2018">2018</option>
+              <option value="Model Year: 2017">2017</option>
+              <option value="Model Year: 2016">2016</option>
+              <option value="Model Year: 2015">2015</option>
+              <option value="Model Year: 2014">2014</option>
+              <option value="Model Year: 2013">2013</option>
+              <option value="Model Year: 2012">2012</option>
+              <option value="Model Year: 2011">2011</option>
+              <option value="Model Year: 2010">2010</option>            
             </select>
           </li>
           <li>Monthly Payment
             <select name="carPayment" id="carPayment">
-              <option value=null>Select Payment</option>
-              <option value="100">$0 - $100</option>
-              <option value="200">$101 - $200</option>
-              <option value="300">$201 - $300 </option>
-              <option value="400">$300 - $400</option>
-              <option value="above">$401+</option>
+              <option value=null></option>
+              <option value="< $100">$0 - $100</option>
+              <option value="$101 - $200">$101 - $200</option>
+              <option value="$201 - $300">$201 - $300 </option>
+              <option value="$301 - $400">$300 - $400</option>
+              <option value="$401+">$401+</option>
             </select>
           </li>
           <li>Mileage
             <select name="carMileage" id="carMileage">
-              <option value="null">Select Mileage</option>
-              <option value="10000">0 - 10,000</option>
+              <option value="null"></option>
+              <option value="< 10,000">0 - 10,000</option>
               <option value="20000">10,000 - 20,000</option>
               <option value="30000">20,000 - 30,000 </option>
               <option value="40000">30,000 - 40,000</option>
