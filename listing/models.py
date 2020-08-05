@@ -8,13 +8,13 @@ class Car(models.Model):
 	model_name=models.CharField(max_length=200)
 	brand=models.ForeignKey('Brand', on_delete=models.SET_NULL, null=True)
 	launch_year=models.CharField(max_length=4)
-
 	class Meta:
 		ordering=['-launch_year']
 
 	def __str__(self):
 		return self.model_name
 
+#how to make data model
 class CarInstance(models.Model):
 	id=models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular car')
 	car=models.ForeignKey(Car, on_delete=models.SET_NULL, null=True)
@@ -30,3 +30,9 @@ class Brand(models.Model):
 
 	def __str__(self):
 		return self.name
+
+
+
+
+
+
