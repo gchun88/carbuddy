@@ -13,8 +13,8 @@
   color: black;
   text-decoration: none;
 }
-#p1 {
-  background-color: red;
+#filterForm ul li select {
+  border: none;
 }
 
 .basePage {
