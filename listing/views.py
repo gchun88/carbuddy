@@ -23,3 +23,17 @@ class CarInstanceListView(generic.ListView):
 # def testlink1(request):
 #     html = '<html><body><a href="carmodels/">carmodel List</a></body></html>'
 #     return HttpResponse(html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

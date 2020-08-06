@@ -4,9 +4,7 @@ var slideIndex2 = 1;
 var slidetest = false;
 
 
-var heejae = 1;
-console.log(heejae);
-
+console.log(1);
 
 slideArrow_1(slideIndex1);
 slidePosition_1(slideIndex1);
@@ -108,8 +106,8 @@ function matilda(){
   for(i = 0; i < mtd.length; i++){
   mtd[i].style.display = "none";
   }
-  mtd[1].style.display = "block";
-  console.log(mtd[1])
+  mtd[0].style.display = "block";
+  console.log(mtd[2])
 }
 
 

@@ -115,3 +115,66 @@ img {vertical-align: middle;}
   right: 10px;
   bottom: 10px;
 }
+
+.main-slide-2{
+  width: 860px;
+  height: 500px;
+}
+
+.main-slide-1{
+  width: 860px;
+  height: 500px;
+}
+
+
+.slideshow-practice{
+  position:relative;
+}
+
+.over-img1{
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position:absolute;
+  top:85%;
+  left:20%;
+}
+
+.over-img2{
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  position:absolute;
+  top:85%;
+  left:21%;
+}
+.over-img3{
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  position:absolute;
+  top:85%;
+  left:22%;
+}
+
+
+.over-img4{
+  height: 45px;
+  width: 30px;
+  position:absolute;
+  top:50%;
+  left:5%;
+}
+
+.over-img5{
+  height: 45px;
+  width: 30px;
+  position:absolute;
+  top:50%;
+  left:43%;
+}
+
