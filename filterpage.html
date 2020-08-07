@@ -10,7 +10,19 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style type="text/css">
+          #availOptionDetailsWrapper div {
+            display: inline-block;
+          }
+          #price, #monthPay, #downPay {
+            width: 10%;
+          }
+        </style>
     </head>
     <body>
 
@@ -28,43 +40,488 @@
                 <a href="">
                   <span>Clear All</span>
                 </a>
-                <div id="filterNumOneWrapper">
-                  <div id="filterNumOne">
-                    <div id="filterNumOneNameWrapper">
-                      <p>This is Filter #1</p>
-                    
+                <div id="carBrandFilterWrapper">
+                  <div id="carBrandFilter">
+                    <div id="nameOfFilterWrapper">
+                      <p>Make</p>
                     </div>
-                    <div id="filterNumOneAvailOptions">
-                      <div id="filterNumOneOptionOne">
+                    <div id="carBrandAvailOptions">
+                      <div id="carBrandAudi">
                         <label>
-                          <div id="availOptionWrapper">
+                          <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="open_now">      
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_audi">      
                             </div>
-                            <div id="filterDescriptionWrapper">
-                              <div id="filterDescription">
-                                <span>Filter #1 Option #1</span>    
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Audi</span>    
                               </div>  
                             </div>
-                              
                           </div>
                         </label>  
                       </div>
-                      <div id="filterNumOneOptionTwo">
-                          
+                      <div id="carBrandBMW">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_bmw">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>BMW</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
                       </div>
-                      <div id="filterNumOneOptionThree">
-                          
+                      <div id="carBrandCadillac">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_cadillac">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Cadillac</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandChevrolet">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_chevrolet">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Chevrolet</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandChrysler">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_chrysler">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Chrysler</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandFiat">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_fiat">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Fiat</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandFord">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_ford">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Ford</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandGMC">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_gmc">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>GMC</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandHyundai">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_hyundai">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Hyundai</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandInfiniti">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_infiniti">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Infiniti</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandJaguar">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_Jaguar">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Jaguar</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandJeep">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_jeep">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Jeep</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandKia">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_kia">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Kia</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandLandRover">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_landrover">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Land Rover</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandMercedes">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_mercedes">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Mercedes-Benz</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandPorsche">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_porsche">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Porsche</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandTesla">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_tesla">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Tesla</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carBrandVolkswagen">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_volkswagen">      
+                            </div>
+                            <div id="nameOfBrandWrapper">
+                              <div id="nameOfBrand">
+                                <span>Volkswagen</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div id="carTypeFilterWrapper">
+                  <div id="carTypeFilter">
+                    <div id="nameOfFilterWrapper">
+                      <p>Type</p>
+                    </div>
+                    <div id="carTypeAvailOptions">
+                      <div id="carTypeConvertibles">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_convertibles">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Convertibles</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carTypeCoupes">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_coupes">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Coupes</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carTypeCrossovers">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_crossovers">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Crossovers</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div>
+                      <div id="carTypeDiesel">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_diesel">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Diesel Engines</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeElectricVehicles">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_electricvehicles">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Electric Vehicles</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeHybrids">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_hybrids">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Hybrids</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeLuxury">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_luxury">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Luxury Vehicles</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeMinivans">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_minivans">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Minivans and Vans</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypePickupTrucks">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_pickuptrucks">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Pickup Trucks</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeSedans">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sedans">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Sedans</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeSportUtilities">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sportutilities">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Sport Utilities</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeSports">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sports">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Sports Cars</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
+                      </div><div id="carTypeWagons">
+                        <label>
+                          <div id="availOptionDetailsWrapper">
+                            <div id="checkboxWrapper">
+                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_wagons">      
+                            </div>
+                            <div id="nameOfTypeWrapper">
+                              <div id="nameOfType">
+                                <span>Wagons</span>    
+                              </div>  
+                            </div>
+                          </div>
+                        </label>  
                       </div>
                     </div>
                   </div>
                 </div>
-                <div id="filterNumTwo">
-                    
+
+                <div id="carPriceFilterWrapper">
+                  <div id="carPriceFilter">
+                    <div id="nameOfFilterWrapper">
+                      <p>Price / Monthly Payment</p>
+                    </div>
+                    <div id="carPriceDetailsWrapper">
+                      <div id="carPriceDetails">
+                        <div id="carPriceSlider">
+                          <p>
+                            <label for="priceRange">Price range:</label>
+                            <input type="text" id="priceRange" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                          </p>
+                          <div id="price"></div>
+                        </div>
+                      </div>
+                      <div id="carMonthlyPaymentDetails">
+                        <p>
+                          <label for="monthlyPayment">Desired Monthly Payment:</label>
+                          <input type="text" id="monthlyPayment" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        </p>
+                        <div id="monthPay"></div>
+
+                        <p>
+                          <label for="downPayment">Down Payment:</label>
+                          <input type="text" id="downPayment" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        </p>
+                        <div id="downPay"></div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
-                <div id="filterNumThree">
-                    
-                </div>
+
+
+
+
+
               </div>
             </div>
             <div id="filterFooter">
@@ -74,7 +531,48 @@
         </div>
       </div>
 
-	<script src="js/vendor/jquery.js"></script>
+      <script>
+        $( function() {
+          $( "#price" ).slider({
+            range: true,
+            min: 4000,
+            step: 500,
+            max: 50000,
+            values: [ 4000, 50000 ],
+            slide: function( event, ui ) {
+              if(ui.values[1] === 50000) {
+                $( "#priceRange" ).val( "$" + ui.values[0] + " - $" + ui.values[1] + "+");
+              } else {
+                $( "#priceRange" ).val( "$" + ui.values[0] + " - $" + ui.values[1]);
+              }
+            }
+          });
+          $( "#priceRange" ).val( "$" + $( "#price" ).slider( "values", 0 ) + " - $" + $( "#price" ).slider( "values", 1 ) + "+");
 
+          $("#monthPay").slider({
+            range: "min",
+            value: 800,
+            min: 0,
+            step: 50,
+            max: 800,
+            slide: function(event, ui) {
+              $("#monthlyPayment").val("$" + ui.value);
+            }
+          });
+          $("#monthlyPayment").val("$" + $("#monthPay").slider("value"));
+
+          $("#downPay").slider({
+            range: "max",
+            value: 0,
+            min: 0,
+            step: 100,
+            max: 20000,
+            slide: function(event, ui) {
+              $("#downPayment").val("$" + ui.value);
+            }
+          });
+          $("#downPayment").val("$" + $("#downPay").slider("value"));
+        });
+      </script>
     </body>
 </html>
