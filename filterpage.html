@@ -31,11 +31,8 @@
           <div id="filterPageWrapper">
             <div id="filterPannelWrapper">
               <div id="filterContainer">
-                <p>Number of Filters Selected</p>
+                <p id="numberOfSelectedFilters"></p>
                 <div id="selectedFilters">
-                  <span>Selected Filter #1</span>
-                  <span> | </span>
-                  <span>Selected Filter #2</span>
                 </div>
                 <a href="">
                   <span>Clear All</span>
@@ -50,7 +47,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_audi">      
+                              <input tabindex="0" id="audiCheck" type="checkbox" placeholder=" " value="Audi" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -64,7 +61,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_bmw">      
+                              <input tabindex="0" id="bmwCheck" type="checkbox" placeholder=" " value="BMW" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -78,7 +75,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_cadillac">      
+                              <input tabindex="0" id="cadillacCheck" type="checkbox" placeholder=" " value="Cadillac" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -92,7 +89,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_chevrolet">      
+                              <input tabindex="0" id="chevroletCheck" type="checkbox" placeholder=" " value="Chevrolet" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -106,7 +103,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_chrysler">      
+                              <input tabindex="0" id="chryslerCheck" type="checkbox" placeholder=" " value="Chrysler" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -120,7 +117,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_fiat">      
+                              <input tabindex="0" id="fiatCheck" type="checkbox" placeholder=" " value="Fiat" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -134,7 +131,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_ford">      
+                              <input tabindex="0" id="fordCheck" type="checkbox" placeholder=" " value="Ford" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -148,7 +145,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_gmc">      
+                              <input tabindex="0" id="gmcCheck" type="checkbox" placeholder=" " value="GMC" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -162,7 +159,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_hyundai">      
+                              <input tabindex="0" id="hyundaiCheck" type="checkbox" placeholder=" " value="Hyundai" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -176,7 +173,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_infiniti">      
+                              <input tabindex="0" id="infinitiCheck" type="checkbox" placeholder=" " value="Infiniti" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -190,7 +187,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_Jaguar">      
+                              <input tabindex="0" id="jaguarCheck" type="checkbox" placeholder=" " value="Jaguar" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -204,7 +201,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_jeep">      
+                              <input tabindex="0" id="jeepCheck" type="checkbox" placeholder=" " value="Jeep" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -218,7 +215,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_kia">      
+                              <input tabindex="0" id="kiaCheck" type="checkbox" placeholder=" " value="Kia" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -232,7 +229,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_landrover">      
+                              <input tabindex="0" id="landroverCheck" type="checkbox" placeholder=" " value="Land Rover" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -246,7 +243,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_mercedes">      
+                              <input tabindex="0" id="mercedesCheck" type="checkbox" placeholder=" " value="Mercedes-Benz" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -260,7 +257,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_porsche">      
+                              <input tabindex="0" id="porscheCheck" type="checkbox" placeholder=" " value="Porsche" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -274,7 +271,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_tesla">      
+                              <input tabindex="0" id="teslaCheck" type="checkbox" placeholder=" " value="Tesla" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -288,7 +285,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="brand_volkswagen">      
+                              <input tabindex="0" id="volkswagenCheck" type="checkbox" placeholder=" " value="Volkswagen" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfBrandWrapper">
                               <div id="nameOfBrand">
@@ -312,7 +309,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_convertibles">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_convertibles">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -326,7 +323,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_coupes">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_coupes">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -340,7 +337,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_crossovers">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_crossovers">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -354,7 +351,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_diesel">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_diesel">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -367,7 +364,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_electricvehicles">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_electricvehicles">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -380,7 +377,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_hybrids">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_hybrids">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -393,7 +390,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_luxury">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_luxury">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -406,7 +403,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_minivans">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_minivans">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -419,7 +416,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_pickuptrucks">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_pickuptrucks">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -432,7 +429,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sedans">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sedans">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -445,7 +442,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sportutilities">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sportutilities">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -458,7 +455,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_sports">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sports">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -471,7 +468,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" class="input__373c0__1kQwh" type="checkbox" placeholder=" " value="type_wagons">      
+                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_wagons">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -532,6 +529,32 @@
       </div>
 
       <script>
+        renderFilter = (currentElement) => {
+          var checkBox = document.getElementById(currentElement);
+          var filterList = document.getElementById("selectedFilters");
+          if(checkBox.checked == true) {
+            if(filterList.innerText === '') {
+              filterList.innerHTML = '<span>' + checkBox.value + '</span>';
+            } else {
+              filterList.innerHTML += '<span> | ' + checkBox.value + '  </span>';
+              // filterList.innerHTML += '<span> | </span>' + '<span>' + checkBox.value + '</span>';
+            }
+          } else {
+            //remove the unchecked filter 
+            //error to fix: currently removes the last element from selectedFilters
+            //              need to remove the specific element 
+            console.log(currentElement);
+            filterList.removeChild(filterList.childNodes[filterList.childNodes.length - 1]);
+          }
+          //displays the number of filters selected
+          //error to fix: shows 1 Filter when none are selected
+          if($("#selectedFilters > span").length == 1) {
+            document.getElementById("numberOfSelectedFilters").innerHTML = '1 Filter'
+          } else if($("#selectedFilters > span").length > 1) {
+            document.getElementById("numberOfSelectedFilters").innerHTML = $("#selectedFilters > span").length + ' Filters';
+          }
+        }
+
         $( function() {
           $( "#price" ).slider({
             range: true,
