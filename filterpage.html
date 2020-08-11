@@ -532,19 +532,21 @@
         renderFilter = (currentElement) => {
           var checkBox = document.getElementById(currentElement);
           var filterList = document.getElementById("selectedFilters");
+          var brandName = checkBox.value;
+
           if(checkBox.checked == true) {
             if(filterList.innerText === '') {
-              filterList.innerHTML = '<span>' + checkBox.value + '</span>';
+              //need to look into template literals
+              filterList.innerHTML = '<span id="' + brandName.toLowerCase() + 'Span">' + checkBox.value + '</span>';
             } else {
-              filterList.innerHTML += '<span> | ' + checkBox.value + '  </span>';
+              filterList.innerHTML += '<span id="' + brandName.toLowerCase() + 'Span"> | ' + checkBox.value + '  </span>';
               // filterList.innerHTML += '<span> | </span>' + '<span>' + checkBox.value + '</span>';
             }
           } else {
             //remove the unchecked filter 
-            //error to fix: currently removes the last element from selectedFilters
-            //              need to remove the specific element 
-            console.log(currentElement);
-            filterList.removeChild(filterList.childNodes[filterList.childNodes.length - 1]);
+            //error to fix: if 
+            $(`span[id^=${brandName.toLowerCase()}]`).remove();
+            // filterList.removeChild(filterList.childNodes[filterList.childNodes.length - 1]);
           }
           //displays the number of filters selected
           //error to fix: shows 1 Filter when none are selected
