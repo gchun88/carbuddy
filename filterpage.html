@@ -532,7 +532,7 @@
         renderFilter = (currentElement) => {
           var checkBox = document.getElementById(currentElement);
           var filterList = document.getElementById("selectedFilters");
-          var brandName = checkBox.value;
+          var brandName = checkBox.value.replace(/\s+/g, '');
 
           if(checkBox.checked == true) {
             if(filterList.innerText === '') {
