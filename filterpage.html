@@ -309,7 +309,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_convertibles">      
+                              <input tabindex="0" id="convertibleCheck" type="checkbox" placeholder=" " value="Convertibles" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -323,7 +323,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_coupes">      
+                              <input tabindex="0" id="coupeCheck" type="checkbox" placeholder=" " value="Coupes" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -337,7 +337,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_crossovers">      
+                              <input tabindex="0" id="crossoverCheck" type="checkbox" placeholder=" " value="Crossovers" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -351,7 +351,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_diesel">      
+                              <input tabindex="0" id="dieselCheck" type="checkbox" placeholder=" " value="Diesel" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -364,7 +364,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_electricvehicles">      
+                              <input tabindex="0" id="electricVehicleCheck" type="checkbox" placeholder=" " value="Electric Vehicles" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -377,7 +377,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_hybrids">      
+                              <input tabindex="0" id="hybridCheck" type="checkbox" placeholder=" " value="Hybrids" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -390,7 +390,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_luxury">      
+                              <input tabindex="0" id="luxuryCheck" type="checkbox" placeholder=" " value="Luxury" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -403,7 +403,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_minivans">      
+                              <input tabindex="0" id="minivanCheck" type="checkbox" placeholder=" " value="Minivans" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -416,7 +416,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_pickuptrucks">      
+                              <input tabindex="0" id="pickupCheck" type="checkbox" placeholder=" " value="Pickup Trucks" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -429,7 +429,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sedans">      
+                              <input tabindex="0" id="sedanCheck" type="checkbox" placeholder=" " value="Sedans" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -442,7 +442,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sportutilities">      
+                              <input tabindex="0" id="suvCheck" type="checkbox" placeholder=" " value="Sport Utilities" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -455,7 +455,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_sports">      
+                              <input tabindex="0" id="sportsCheck" type="checkbox" placeholder=" " value="Sports Cars" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -468,7 +468,7 @@
                         <label>
                           <div id="availOptionDetailsWrapper">
                             <div id="checkboxWrapper">
-                              <input tabindex="0" id="Check" type="checkbox" placeholder=" " value="type_wagons">      
+                              <input tabindex="0" id="wagonCheck" type="checkbox" placeholder=" " value="Wagons" onclick="renderFilter(this.id)">      
                             </div>
                             <div id="nameOfTypeWrapper">
                               <div id="nameOfType">
@@ -532,19 +532,21 @@
         renderFilter = (currentElement) => {
           var checkBox = document.getElementById(currentElement);
           var filterList = document.getElementById("selectedFilters");
+          var brandName = checkBox.value.replace(/\s+/g, '');
+
           if(checkBox.checked == true) {
             if(filterList.innerText === '') {
-              filterList.innerHTML = '<span>' + checkBox.value + '</span>';
+              //need to look into template literals
+              filterList.innerHTML = '<span id="' + brandName.toLowerCase() + 'Span">' + checkBox.value + '</span>';
             } else {
-              filterList.innerHTML += '<span> | ' + checkBox.value + '  </span>';
+              filterList.innerHTML += '<span id="' + brandName.toLowerCase() + 'Span"> | ' + checkBox.value + '  </span>';
               // filterList.innerHTML += '<span> | </span>' + '<span>' + checkBox.value + '</span>';
             }
           } else {
             //remove the unchecked filter 
-            //error to fix: currently removes the last element from selectedFilters
-            //              need to remove the specific element 
-            console.log(currentElement);
-            filterList.removeChild(filterList.childNodes[filterList.childNodes.length - 1]);
+            //error to fix: if the first element is removed, there is the | remaining on the list
+            $(`span[id^=${brandName.toLowerCase()}]`).remove();
+            // filterList.removeChild(filterList.childNodes[filterList.childNodes.length - 1]);
           }
           //displays the number of filters selected
           //error to fix: shows 1 Filter when none are selected
@@ -555,7 +557,7 @@
           }
         }
 
-        $( function() {
+        $(function() {
           $( "#price" ).slider({
             range: true,
             min: 4000,
