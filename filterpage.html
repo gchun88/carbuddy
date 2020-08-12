@@ -494,7 +494,7 @@
                             <label for="priceRange">Price range:</label>
                             <input type="text" id="priceRange" readonly style="border:0; color:#f6931f; font-weight:bold;">
                           </p>
-                          <div id="price"></div>
+                          <div id="price" onclick="renderPriceRangeFilter()"></div>
                         </div>
                       </div>
                       <div id="carMonthlyPaymentDetails">
@@ -502,13 +502,13 @@
                           <label for="monthlyPayment">Desired Monthly Payment:</label>
                           <input type="text" id="monthlyPayment" readonly style="border:0; color:#f6931f; font-weight:bold;">
                         </p>
-                        <div id="monthPay"></div>
+                        <div id="monthPay" onclick="renderMonthPayFilter()"></div>
 
                         <p>
                           <label for="downPayment">Down Payment:</label>
-                          <input type="text" id="downPayment" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                          <input type="text" id="downPayment" readonly style="border:0; color:#f6931f; font-weight:bold;" >
                         </p>
-                        <div id="downPay"></div>
+                        <div id="downPay" onclick="renderDownPayFilter()"></div>
                       </div>
 
                     </div>
@@ -530,6 +530,7 @@
 
       <script>
         renderFilter = (currentElement) => {
+
           var checkBox = document.getElementById(currentElement);
           var filterList = document.getElementById("selectedFilters");
           var brandName = checkBox.value.replace(/\s+/g, '');
@@ -551,11 +552,51 @@
           //displays the number of filters selected
           //error to fix: shows 1 Filter when none are selected
           if($("#selectedFilters > span").length == 1) {
-            document.getElementById("numberOfSelectedFilters").innerHTML = '1 Filter'
+            document.getElementById("numberOfSelectedFilters").innerHTML = '1 Filter';
           } else if($("#selectedFilters > span").length > 1) {
             document.getElementById("numberOfSelectedFilters").innerHTML = $("#selectedFilters > span").length + ' Filters';
+          } else {
+            document.getElementById("numberOfSelectedFilters").innerHTML = '0 Filters';
           }
         }
+
+        renderPriceRangeFilter = () => {
+          var price = document.getElementById("priceRange").value;
+          var filterList = document.getElementById("selectedFilters");
+
+          if(filterList.innerText == '') {
+            filterList.innerHTML = '<span id="priceRangeSpan">Price Range: '  + price + '</span>';
+          } else {
+            $('span[id^=priceRangeSpan').remove();
+            filterList.innerHTML += '<span id="priceRangeSpan"> | Price Range: ' + price + ' </span>';
+          }
+        }
+
+        renderMonthPayFilter = () => {
+          var price = document.getElementById("monthlyPayment").value;
+          var filterList = document.getElementById("selectedFilters");
+
+          if(filterList.innerText == '') {
+            filterList.innerHTML = '<span id="monthlyPaySpan">Maximum Monthly Payment: '  + price + '</span>';
+          } else {
+            $('span[id^=monthlyPaySpan').remove();
+            filterList.innerHTML += '<span id="monthlyPaySpan"> | Maximum Monthly Payment: ' + price + ' </span>';
+          }
+        }
+
+        renderDownPayFilter = () => {
+          var price = document.getElementById("downPayment").value;
+          var filterList = document.getElementById("selectedFilters");
+
+          if(filterList.innerText == '') {
+            filterList.innerHTML = '<span id="downPaySpan">Maximum Down Payment: '  + price + '</span>';
+          } else {
+            $('span[id^=downPaySpan').remove();
+            filterList.innerHTML += '<span id="downPaySpan"> | Maximum Down Payment: ' + price + ' </span>';
+          }
+        }
+
+
 
         $(function() {
           $( "#price" ).slider({
