@@ -51,10 +51,15 @@ letter-spacing: -0.015em;
     /* identical to box height, or 133% */
 
     letter-spacing: -0.04em;
-
-    color: #a09a9a;
 }
 
+
+.active-black{
+    color: #1f1e1e;
+}
+.inactive-gray{
+    color: #a09a9a;
+}
 
 #deal-options-preowned{
     font-family: Al Nile;
@@ -65,8 +70,6 @@ letter-spacing: -0.015em;
     /* identical to box height, or 133% */
 
     letter-spacing: -0.04em;
-
-    color: #a09a9a;
 }
 
 #deal-options-details{
@@ -79,7 +82,7 @@ letter-spacing: -0.015em;
 
     letter-spacing: -0.04em;
 
-    color: #a09a9a;
+
 }
 
 #offer-card{

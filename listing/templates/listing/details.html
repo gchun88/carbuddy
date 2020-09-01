@@ -140,11 +140,10 @@
 
 
 <div class ="row container-fluid">
-
-    <div  class ="col"><button type="button" class="btn btn-light" id="deal-options-lease" onclick="myFunction1()">Lease Offer</button></div>
-    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-new" onclick="myFunction2()">New Offer</button></div>
-    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-preowned" onclick="myFunction3()">Pre-Owned Offer</button></div>
-    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-details" onclick="myFunction4()">Details</button></div>
+    <div  class ="col"><button type="button" class="btn btn-light inactive-gray" id="deal-options-lease" onclick="myFunction1(); button_handler(1);">Lease Offer</button></div>
+    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-new" onclick="myFunction2(); button_handler(2);">New Offer</button></div>
+    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-preowned" onclick="myFunction3(); button_handler(3);">Pre-Owned Offer</button></div>
+    <div class ="col"><button type="button" class="btn btn-light" id="deal-options-details" onclick="myFunction4(); button_handler(4);">Details</button></div>
 </div>
 <!-- Surround the select box within a "custom-select" DIV element.
 Remember to set the width: -->
@@ -158,9 +157,8 @@ border: 1px solid #CECEC4;"></h1>
 <p id="demo"></p>
 
 <!-- This will be replaced after data modeling -->
-<script src="{% static '/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js' %}" >
-
-</script>
+        <script src="{% static '/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js' %}" ></script>
+<script src="{% static '/listing_detail_js/detail_1.js' %}" ></script>
 
 <script>
 function myFunction1() {
