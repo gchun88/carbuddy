@@ -43,8 +43,30 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
-    'phonenumber_field'
+    'phonenumber_field',
+'allauth',  # <--
+'allauth.account',  # <--
+'allauth.socialaccount',  # <--
+'allauth.socialaccount.providers.google',  # <--
+# 'allauth.socialaccount.providers.facebook',  # <--
+'django.contrib.sites',  # make sure sites is included
 ]
+
+#google authentication???
+AUTHENTICATION_BACKENDS = (
+ 'django.contrib.auth.backends.ModelBackend',
+ 'allauth.account.auth_backends.AuthenticationBackend',
+ )
+SITE_ID = 2
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+ACCOUNT_FORMS = {'signup': 'users.forms.CustomUserCreationForm'}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

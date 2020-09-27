@@ -23,11 +23,11 @@ def register(request):
                     print(form.error_messages[msg])
 
                 return render(request = request,
-                              template_name = "users/register.html",
+                              template_name = "account/register.html",
                               context={"form":form})
 
         form = CustomUserCreationForm
         return render(request = request,
-                      template_name = "users/register.html",
+                      template_name = "account/register.html",
                       context={"form":form})
 

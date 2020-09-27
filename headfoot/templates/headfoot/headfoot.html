@@ -39,11 +39,10 @@
             <div class="col-sm"></div>
             <div id="loginSection" class="col-sm">
               {% if user.is_authenticated %}
-                <span id="logout"><a href="{% url 'logout'%}?next={{request.path}}">Sign Out</a></span>
+                <span id="logout"><a href="{% url 'account_logout'%}?next={{request.path}}">Sign Out</a></span>
                 <span id="loginMessage"> Hi  {{ user.get_username }}</span>
               {% else %}
-                <span style="font-size: 15px" id="login"><a href="{% url 'login' %}?next={{request.path}}">Sign In</a></span>
-                  <span style="font-size: 15px" id="login"><a href="{% url 'users:register' %}?next={{request.path}}">Sign In</a></span>
+                <span style="font-size: 15px" id="login"><a href="{% url 'account_login' %}?next={{request.path}}">Sign In</a></span>
               {% endif %}
             </div>
 
