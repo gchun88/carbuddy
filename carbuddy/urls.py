@@ -20,6 +20,7 @@ from listing import views as views_listing
 from django.conf import settings
 from django.conf.urls.static import static
 from headfoot import views as views_headfoot
+from users import views as u_views
 
 urlpatterns = [
     path('',views_carbuddy.index, name='index'),
@@ -29,6 +30,7 @@ urlpatterns = [
     #path('carmodels/',include('listing.urls')),
     path('list/', views_listing.CarInstanceListView.as_view(), name='car_list'),
     path('test/',views_headfoot.test ),
+    path('registration/', include('users.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
