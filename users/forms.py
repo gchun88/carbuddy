@@ -12,4 +12,4 @@ class CustomUserCreationForm(UserCreationForm):
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = tblUser
-        fields = ('email', 'Firstname', 'Lastname', 'Phone', 'Gender', 'Zipcode', 'date_joined')
+        fields = ('email', 'Firstname', 'Lastname', 'Phone', 'Gender', 'Zipcode', 'date_joined','permission_status')
